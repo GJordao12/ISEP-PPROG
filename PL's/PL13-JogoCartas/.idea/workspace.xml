@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="648776ba-64bc-45b7-82c0-012f79693290" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Arquillian JUnit Test Class" />
+        <option value="JUnit3 Test Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1aa5a9qsZyJrJwHDGvid4YQX89K" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PL14-Aniversarios" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="junit.framework.TestCase" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean compile" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="PL13-JogoCartas" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BaralhoIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PL13-JogoCartas" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BaralhoIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BaralhoIT.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PL13-JogoCartas" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BaralhoIT" />
+      <option name="METHOD_NAME" value="testEquals" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaoDeJogoIT" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PL13-JogoCartas" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MaoDeJogoIT" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaoDeJogoIT.testContarCartasDoTipo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PL13-JogoCartas" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MaoDeJogoIT" />
+      <option name="METHOD_NAME" value="testContarCartasDoTipo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.MaoDeJogoIT" />
+        <item itemvalue="JUnit.BaralhoIT.testEquals" />
+        <item itemvalue="JUnit.MaoDeJogoIT.testContarCartasDoTipo" />
+        <item itemvalue="JUnit.BaralhoIT" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="648776ba-64bc-45b7-82c0-012f79693290" name="Default Changelist" comment="" />
+      <created>1586960924602</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586960924602</updated>
+      <workItem from="1586960927954" duration="6517000" />
+      <workItem from="1586968051213" duration="1073000" />
+      <workItem from="1587250064552" duration="265000" />
+      <workItem from="1587502885532" duration="1046000" />
+      <workItem from="1592181335594" duration="264000" />
+    </task>
+    <task id="LOCAL-00001" summary="Updates PL13">
+      <created>1586968300165</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586968300165</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Testes PL13">
+      <created>1587503309918</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1587503309918</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Testes PL13">
+      <created>1587503412712</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1587503412712</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Testes PL13">
+      <created>1587503889206</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1587503889206</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Updates PL13" />
+    <MESSAGE value="Testes PL13" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testes PL13" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="22" key="#Project_Structure" timestamp="1586963978906">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1586963978906" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1586963247513">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586963247513" />
+    <state x="118" y="0" key="CommitChangelistDialog2" timestamp="1587503883527">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="118" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587503883527" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1592181599580">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592181599580" />
+    <state width="1323" height="237" key="GridCell.Tab.0.bottom" timestamp="1592181592954">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="237" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592181592954" />
+    <state width="1323" height="237" key="GridCell.Tab.0.center" timestamp="1592181592954">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="237" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592181592954" />
+    <state width="1323" height="237" key="GridCell.Tab.0.left" timestamp="1592181592954">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="237" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592181592954" />
+    <state width="1323" height="237" key="GridCell.Tab.0.right" timestamp="1592181592954">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="237" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592181592954" />
+    <state x="184" y="9" key="SettingsEditor" timestamp="1592181362471">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592181362471" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1587503900240">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587503900240" />
+    <state x="387" y="257" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1586968218567">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="387" y="257" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1586968218567" />
+    <state x="454" y="67" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586966141749">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="454" y="67" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1586966141749" />
+    <state x="65" y="25" key="new project wizard" timestamp="1587503973407">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1587503973407" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1592181545547">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1592181545547" />
+  </component>
+</project>

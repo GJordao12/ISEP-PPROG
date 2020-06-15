@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.*?>
+<BorderPane onKeyPressed="#options" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.ui.JanelaPrincipalUI">
+    <bottom>
+        <GridPane vgap="5.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button defaultButton="true" mnemonicParsing="false"
+                        onAction="#adicionarTarefaAction" text="Adicionar Tarefas" GridPane.halignment="CENTER"/>
+                <Button mnemonicParsing="false" onAction="#limparTarefasAction"
+                        text="Limpar Tarefas" GridPane.halignment="CENTER" GridPane.rowIndex="1"/>
+            </children>
+            <padding>
+                <Insets bottom="10.0" top="10.0"/>
+            </padding>
+        </GridPane>
+    </bottom>
+    <right>
+        <TextArea fx:id="txtAreaTarefas" editable="false" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" top="5.0"/>
+            </BorderPane.margin>
+        </TextArea>
+    </right>
+</BorderPane>

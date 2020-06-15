@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane onKeyPressed="#options"  xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ui.JanelaPrincipalUI">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu fx:id="mnuFicheiro" mnemonicParsing="false" onShowing="#mnuFicheiroShowing" text="Ficheiro">
+                    <items>
+                        <MenuItem fx:id="mnuFicheiroGuardarTexto" mnemonicParsing="false" onAction="#mnuFicheiroGuardarTextoAction" text="Guardar como Texto" />
+                        <MenuItem fx:id="mnuFicheiroGuardarBinario" mnemonicParsing="false" onAction="#mnuFicheiroGuardarBinarioAction" text="Guardar como Binário" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="mnuFicheiroSair" mnemonicParsing="false" onAction="#mnuFicheiroSairAction" text="Sair" />
+                    </items>
+                </Menu>
+                <Menu fx:id="mnuTarefa" mnemonicParsing="false" onShowing="#mnuTarefaShowing" text="Tarefa">
+                    <items>
+                        <MenuItem fx:id="mnuTarefaAdicionar" mnemonicParsing="false" onAction="#mnuTarefaAdicionarAction" text="Adicionar" />
+                        <Menu fx:id="mnuTarefaRemover" mnemonicParsing="false" onShowing="#mnuTarefaRemoverShowing" text="Remover">
+                            <items>
+                                <MenuItem fx:id="mnuTarefaRemoverSeleccionada" mnemonicParsing="false" onAction="#mnuTarefaRemoverSeleccionadaAction" text="Selecionada" />
+                                <MenuItem fx:id="mnuTarefaRemoverTodas" mnemonicParsing="false" onAction="#mnuTarefaRemoverTodasAction" text="Todas" />
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <ListView fx:id="lstViewTarefas" prefHeight="300.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+            </BorderPane.margin>
+        </ListView>
+    </center>
+</BorderPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.SceneController">
+    <left>
+        <Button mnemonicParsing="false" onAction="#shiftEsquerdaAction" prefHeight="38.0"
+                prefWidth="51.0" text="&lt;&lt;" BorderPane.alignment="CENTER"/>
+    </left>
+    <right>
+        <Button mnemonicParsing="false" onAction="#shiftDireitaAction" prefHeight="38.0"
+                prefWidth="51.0" text="&gt;&gt;" BorderPane.alignment="CENTER"/>
+    </right>
+    <padding>
+        <Insets left="30.0" right="30.0"/>
+    </padding>
+    <center>
+        <Label fx:id="letrasOrdenadas" alignment="CENTER" prefHeight="58.0" prefWidth="394.0" text="A  B  C"
+               textAlignment="JUSTIFY" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="45.0"/>
+            </font>
+        </Label>
+    </center>
+    <top>
+        <FlowPane hgap="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Quantidade de Letras [3,7]:">
+                    <font>
+                        <Font size="16.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="quantidadeLetras" prefHeight="25.0" prefWidth="63.0" text="3"/>
+                <Button mnemonicParsing="false" onAction="#confirmarAction" prefHeight="26.0"
+                        prefWidth="81.0" text="Confirmar"/>
+            </children>
+            <padding>
+                <Insets top="10.0"/>
+            </padding>
+        </FlowPane>
+    </top>
+</BorderPane>
