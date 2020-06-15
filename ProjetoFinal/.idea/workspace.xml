@@ -45,7 +45,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ISEP-APROG/ExameEpocaNormal" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -56,7 +56,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -236,6 +236,7 @@
       <workItem from="1590702619120" duration="352000" />
       <workItem from="1591201357325" duration="3764000" />
       <workItem from="1592185642785" duration="2215000" />
+      <workItem from="1592241449294" duration="72000" />
     </task>
     <task id="LOCAL-00144" summary="Java Doc">
       <created>1589923858544</created>
@@ -676,11 +677,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="427" y="0" key="Diagram.Print.Preview.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1589997529197" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1590535752820">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1592241548151">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="1800" y="-202" key="FileChooserDialogImpl/0.0.1366.728/1366.-313.1280.680@1366.-313.1280.680" timestamp="1588878619415" />
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590535752820" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1592241548151" />
     <state width="1323" height="230" key="GridCell.Tab.0.bottom" timestamp="1592186986981">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -729,11 +730,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="391" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589995100859" />
-    <state x="128" y="0" key="SettingsEditor" timestamp="1590342567209">
+    <state x="128" y="0" key="SettingsEditor" timestamp="1592241514008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="-1160" y="0" key="SettingsEditor/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1588951268868" />
-    <state x="128" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590342567209" />
+    <state x="128" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1592241514008" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1590348603776">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
