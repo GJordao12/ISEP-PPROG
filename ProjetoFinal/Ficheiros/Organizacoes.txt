@@ -1,0 +1,3 @@
+Nome Organização;NIF;Website;Telefone;Email;Local;Codigo Postal;Localidade;Nome Gestor;Função Gestor;Email Gestor;Telefone Gestor;
+
+ISEP;194805880;www.isep.com;934235021;isep@gmail.com;Portugal;4460-356;Porto;Jordao;Trabalhador de Escritório;jordao@gmail.com;912345378;

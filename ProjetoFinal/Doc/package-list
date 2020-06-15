@@ -1,0 +1,13 @@
+pt.ipp.isep.dei.esoft.autorizacao
+pt.ipp.isep.dei.esoft.autorizacao.model
+pt.ipp.isep.dei.esoft.leitura
+pt.ipp.isep.dei.esoft.pot.controller.console
+pt.ipp.isep.dei.esoft.pot.controller.scene
+pt.ipp.isep.dei.esoft.pot.interfaces
+pt.ipp.isep.dei.esoft.pot.model
+pt.ipp.isep.dei.esoft.pot.model.lista
+pt.ipp.isep.dei.esoft.pot.model.registo
+pt.ipp.isep.dei.esoft.pot.ui
+pt.ipp.isep.dei.esoft.pot.ui.console
+pt.ipp.isep.dei.esoft.pot.ui.console.utils
+pt.ipp.isep.dei.esoft.pot.ui.scene

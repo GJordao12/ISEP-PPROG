@@ -1,0 +1,5 @@
+Área de Atividade Código;Descrição Categoria;Competência Técnica ID;Grau Proficiência Valor;Grau Proficiência Obrigatório;
+
+5678;Categoria Avaliação;1232;2;false;9021;1;false;
+1234;Categoria Informatica;1232;1;false;
+5611;Categoria Edição e Recorte;9999;2;true;

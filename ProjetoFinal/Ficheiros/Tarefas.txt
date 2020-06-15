@@ -1,0 +1,5 @@
+Referência Única;Designação;Descrição Informal;Carácter Técnico;Duração Execução;Custo Tarefa;Categoria Id;Email Utilizador;
+
+11111;Tarefa Programação;Programação de um Jogo;Programação em C;24;120;1231;jordao@gmail.com;
+99999;Tarefa Teste;Fazer teste PPROG;Técnica programação;30;500;1230;jordao@gmail.com;
+22222;Tarefa Editar Foto;Editar 10 Fotos;Técnica de Edição;1;50;1232;jordao@gmail.com;

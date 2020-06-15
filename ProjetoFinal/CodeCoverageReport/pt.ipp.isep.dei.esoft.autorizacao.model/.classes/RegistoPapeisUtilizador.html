@@ -1,0 +1,132 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: RegistoPapeisUtilizador</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.autorizacao.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: RegistoPapeisUtilizador (pt.ipp.isep.dei.esoft.autorizacao.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">RegistoPapeisUtilizador</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (4/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    81,8%
+  </span>
+  <span class="absValue">
+    (9/ 11)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.autorizacao.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.HashSet;
+<i>4</i>&nbsp;import java.util.Set;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;/**
+<i>7</i>&nbsp; * Registo Papeis Utilizador.
+<i>8</i>&nbsp; *
+<i>9</i>&nbsp; * @author paulomaio
+<i>10</i>&nbsp; */
+<b class="fc"><i>11</i>&nbsp;public class RegistoPapeisUtilizador {</b>
+<b class="fc"><i>12</i>&nbsp;    private Set&lt;PapelUtilizador&gt; m_lstPapeis = new HashSet&lt;&gt;();</b>
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;    /**
+<i>15</i>&nbsp;     * Novo papel utilizador.
+<i>16</i>&nbsp;     *
+<i>17</i>&nbsp;     * @param strPapel papel
+<i>18</i>&nbsp;     * @return papel utilizador
+<i>19</i>&nbsp;     */
+<i>20</i>&nbsp;    public PapelUtilizador novoPapelUtilizador(String strPapel) {
+<b class="fc"><i>21</i>&nbsp;        return new PapelUtilizador(strPapel);</b>
+<i>22</i>&nbsp;    }
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    /**
+<i>25</i>&nbsp;     * Adiciona um papel à lista de papeis.
+<i>26</i>&nbsp;     *
+<i>27</i>&nbsp;     * @param papel papel
+<i>28</i>&nbsp;     * @return boolean
+<i>29</i>&nbsp;     */
+<i>30</i>&nbsp;    public boolean addPapel(PapelUtilizador papel) {
+<b class="fc"><i>31</i>&nbsp;        if (papel != null)</b>
+<b class="fc"><i>32</i>&nbsp;            return this.m_lstPapeis.add(papel);</b>
+<b class="nc"><i>33</i>&nbsp;        return false;</b>
+<i>34</i>&nbsp;    }
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    /**
+<i>37</i>&nbsp;     * Procura um determinado papel de um utilizador.
+<i>38</i>&nbsp;     *
+<i>39</i>&nbsp;     * @param strPapel papel
+<i>40</i>&nbsp;     * @return papel utilizador
+<i>41</i>&nbsp;     */
+<i>42</i>&nbsp;    public PapelUtilizador procuraPapel(String strPapel) {
+<b class="fc"><i>43</i>&nbsp;        for (PapelUtilizador p : this.m_lstPapeis) {</b>
+<b class="fc"><i>44</i>&nbsp;            if (p.hasId(strPapel))</b>
+<b class="fc"><i>45</i>&nbsp;                return p;</b>
+<b class="fc"><i>46</i>&nbsp;        }</b>
+<b class="nc"><i>47</i>&nbsp;        return null;</b>
+<i>48</i>&nbsp;    }
+<i>49</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

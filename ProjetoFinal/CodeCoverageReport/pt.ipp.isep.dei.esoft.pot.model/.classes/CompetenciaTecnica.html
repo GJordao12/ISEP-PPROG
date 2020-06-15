@@ -1,0 +1,211 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: CompetenciaTecnica</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: CompetenciaTecnica (pt.ipp.isep.dei.esoft.pot.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">CompetenciaTecnica</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    62,5%
+  </span>
+  <span class="absValue">
+    (5/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    71,9%
+  </span>
+  <span class="absValue">
+    (23/ 32)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.ArrayList;
+<i>4</i>&nbsp;import java.util.List;
+<i>5</i>&nbsp;import java.util.Objects;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;/**
+<i>8</i>&nbsp; * Competência Técnica.
+<i>9</i>&nbsp; */
+<i>10</i>&nbsp;public class CompetenciaTecnica {
+<i>11</i>&nbsp;    private String m_strId;
+<i>12</i>&nbsp;    private String m_strDescricaoBreve;
+<i>13</i>&nbsp;    private String m_strDescricaoDetalhada;
+<i>14</i>&nbsp;    private AreaAtividade m_oAreaAtividade;
+<i>15</i>&nbsp;    private List&lt;GrauProficiencia&gt; m_lstGraus;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    /**
+<i>19</i>&nbsp;     * Instancia uma nova Competência técnica.
+<i>20</i>&nbsp;     *
+<i>21</i>&nbsp;     * @param strId                 id
+<i>22</i>&nbsp;     * @param strDescricaoBreve     descrição breve
+<i>23</i>&nbsp;     * @param strDescricaoDetalhada descrição detalhada
+<i>24</i>&nbsp;     * @param oArea                 área
+<i>25</i>&nbsp;     */
+<b class="fc"><i>26</i>&nbsp;    public CompetenciaTecnica(String strId, String strDescricaoBreve, String strDescricaoDetalhada, AreaAtividade oArea) {</b>
+<b class="fc"><i>27</i>&nbsp;        if ((strId == null) || (strDescricaoBreve == null) || (strDescricaoDetalhada == null) ||</b>
+<b class="fc"><i>28</i>&nbsp;                (oArea == null) || (strId.isEmpty()) || (strDescricaoBreve.isEmpty()) || (strDescricaoDetalhada.isEmpty()))</b>
+<b class="nc"><i>29</i>&nbsp;            throw new IllegalArgumentException(&quot;Nenhum dos argumentos pode ser nulo ou vazio.&quot;);</b>
+<i>30</i>&nbsp;
+<b class="fc"><i>31</i>&nbsp;        this.m_strId = strId;</b>
+<b class="fc"><i>32</i>&nbsp;        this.m_strDescricaoBreve = strDescricaoBreve;</b>
+<b class="fc"><i>33</i>&nbsp;        this.m_strDescricaoDetalhada = strDescricaoDetalhada;</b>
+<b class="fc"><i>34</i>&nbsp;        this.m_oAreaAtividade = oArea;</b>
+<b class="fc"><i>35</i>&nbsp;        this.m_lstGraus = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i>36</i>&nbsp;    }</b>
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;    /**
+<i>39</i>&nbsp;     * Devolve o id.
+<i>40</i>&nbsp;     *
+<i>41</i>&nbsp;     * @return id
+<i>42</i>&nbsp;     */
+<i>43</i>&nbsp;    public String getM_strId() {
+<b class="fc"><i>44</i>&nbsp;        return this.m_strId;</b>
+<i>45</i>&nbsp;    }
+<i>46</i>&nbsp;
+<i>47</i>&nbsp;    /**
+<i>48</i>&nbsp;     * Verifica se tem id.
+<i>49</i>&nbsp;     *
+<i>50</i>&nbsp;     * @param strId id
+<i>51</i>&nbsp;     * @return boolean
+<i>52</i>&nbsp;     */
+<i>53</i>&nbsp;    public boolean hasId(String strId) {
+<b class="nc"><i>54</i>&nbsp;        return this.m_strId.equalsIgnoreCase(strId);</b>
+<i>55</i>&nbsp;    }
+<i>56</i>&nbsp;
+<i>57</i>&nbsp;    /**
+<i>58</i>&nbsp;     * Hash code.
+<i>59</i>&nbsp;     *
+<i>60</i>&nbsp;     * @return hash
+<i>61</i>&nbsp;     */
+<i>62</i>&nbsp;    @Override
+<i>63</i>&nbsp;    public int hashCode() {
+<b class="nc"><i>64</i>&nbsp;        int hash = 7;</b>
+<b class="nc"><i>65</i>&nbsp;        hash = 23 * hash + Objects.hashCode(this.m_strId);</b>
+<b class="nc"><i>66</i>&nbsp;        return hash;</b>
+<i>67</i>&nbsp;    }
+<i>68</i>&nbsp;
+<i>69</i>&nbsp;    /**
+<i>70</i>&nbsp;     * Verifica se dois objetos são iguais.
+<i>71</i>&nbsp;     *
+<i>72</i>&nbsp;     * @param o objeto
+<i>73</i>&nbsp;     * @return boolean
+<i>74</i>&nbsp;     */
+<i>75</i>&nbsp;    @Override
+<i>76</i>&nbsp;    public boolean equals(Object o) {
+<i>77</i>&nbsp;        // Inspirado em https://www.sitepoint.com/implement-javas-equals-method-correctly/
+<i>78</i>&nbsp;
+<i>79</i>&nbsp;        // self check
+<b class="fc"><i>80</i>&nbsp;        if (this == o)</b>
+<b class="fc"><i>81</i>&nbsp;            return true;</b>
+<i>82</i>&nbsp;        // null check
+<b class="fc"><i>83</i>&nbsp;        if (o == null)</b>
+<b class="nc"><i>84</i>&nbsp;            return false;</b>
+<i>85</i>&nbsp;        // type check and cast
+<b class="fc"><i>86</i>&nbsp;        if (getClass() != o.getClass())</b>
+<b class="nc"><i>87</i>&nbsp;            return false;</b>
+<i>88</i>&nbsp;        // field comparison
+<b class="fc"><i>89</i>&nbsp;        CompetenciaTecnica obj = (CompetenciaTecnica) o;</b>
+<b class="fc"><i>90</i>&nbsp;        return (Objects.equals(m_strId, obj.m_strId));</b>
+<i>91</i>&nbsp;    }
+<i>92</i>&nbsp;
+<i>93</i>&nbsp;    /**
+<i>94</i>&nbsp;     * Adiciona à lista de graus de proficiência.
+<i>95</i>&nbsp;     *
+<i>96</i>&nbsp;     * @param valor      valor
+<i>97</i>&nbsp;     * @param designacao designação
+<i>98</i>&nbsp;     */
+<i>99</i>&nbsp;    public void addGrauProficiencia(int valor, String designacao) {
+<b class="fc"><i>100</i>&nbsp;        GrauProficiencia gp = new GrauProficiencia(valor, designacao);</b>
+<b class="fc"><i>101</i>&nbsp;        this.m_lstGraus.add(gp);</b>
+<b class="fc"><i>102</i>&nbsp;    }</b>
+<i>103</i>&nbsp;
+<i>104</i>&nbsp;    /**
+<i>105</i>&nbsp;     * Devolve a descrição textual da competência técnica.
+<i>106</i>&nbsp;     *
+<i>107</i>&nbsp;     * @return descrição textual
+<i>108</i>&nbsp;     */
+<i>109</i>&nbsp;    @Override
+<i>110</i>&nbsp;    public String toString() {
+<b class="nc"><i>111</i>&nbsp;        return String.format(&quot;%s , %s , %s  - Area Atividade: %s&quot;, this.m_strId, this.m_strDescricaoBreve, this.m_strDescricaoDetalhada, this.m_oAreaAtividade.toString());</b>
+<i>112</i>&nbsp;    }
+<i>113</i>&nbsp;
+<i>114</i>&nbsp;    /**
+<i>115</i>&nbsp;     * Devolve o grau de proficiência através do valor do grau.
+<i>116</i>&nbsp;     *
+<i>117</i>&nbsp;     * @param valorGrau valor grau
+<i>118</i>&nbsp;     * @return grau proficiência by valor
+<i>119</i>&nbsp;     */
+<i>120</i>&nbsp;    public GrauProficiencia getGrauProficienciaByValor(int valorGrau) {
+<b class="fc"><i>121</i>&nbsp;        for (GrauProficiencia gp : this.m_lstGraus) {</b>
+<b class="fc"><i>122</i>&nbsp;            if (gp.getM_intValor() == valorGrau) {</b>
+<b class="fc"><i>123</i>&nbsp;                return gp;</b>
+<i>124</i>&nbsp;            }
+<b class="fc"><i>125</i>&nbsp;        }</b>
+<b class="nc"><i>126</i>&nbsp;        return null;</b>
+<i>127</i>&nbsp;    }
+<i>128</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

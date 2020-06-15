@@ -1,0 +1,264 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: AutenticacaoUI</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.ui.scene</a> ]
+</div>
+
+<h1>Coverage Summary for Class: AutenticacaoUI (pt.ipp.isep.dei.esoft.pot.ui.scene)</h1>
+
+<table class="coverageStats">
+
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AutenticacaoUI</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 49)
+  </span>
+</td>
+</tr>
+  <tr>
+    <td class="name">AutenticacaoUI$1</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 8)
+  </span>
+</td>
+  </tr>
+<tr>
+  <td class="name"><strong>total</strong></td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 57)
+  </span>
+</td>
+</tr>
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.ui.scene;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import javafx.event.EventHandler;
+<i>4</i>&nbsp;import javafx.fxml.FXML;
+<i>5</i>&nbsp;import javafx.fxml.FXMLLoader;
+<i>6</i>&nbsp;import javafx.fxml.Initializable;
+<i>7</i>&nbsp;import javafx.scene.Parent;
+<i>8</i>&nbsp;import javafx.scene.Scene;
+<i>9</i>&nbsp;import javafx.scene.control.*;
+<i>10</i>&nbsp;import javafx.scene.image.Image;
+<i>11</i>&nbsp;import javafx.stage.Modality;
+<i>12</i>&nbsp;import javafx.stage.Stage;
+<i>13</i>&nbsp;import javafx.stage.WindowEvent;
+<i>14</i>&nbsp;import pt.ipp.isep.dei.esoft.autorizacao.model.PapelUtilizador;
+<i>15</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.controller.console.AplicacaoPOT;
+<i>16</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.controller.console.AutenticacaoController;
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;import java.io.IOException;
+<i>19</i>&nbsp;import java.net.URL;
+<i>20</i>&nbsp;import java.util.List;
+<i>21</i>&nbsp;import java.util.ResourceBundle;
+<i>22</i>&nbsp;
+<i>23</i>&nbsp;/**
+<i>24</i>&nbsp; * Autenticação UI
+<i>25</i>&nbsp; */
+<b class="nc"><i>26</i>&nbsp;public class AutenticacaoUI implements Initializable {</b>
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    private AutenticacaoController appController;//a consola e a interface gráfica partilham o mesmo controller.
+<i>29</i>&nbsp;    private Stage seriarAnuncioStage;
+<i>30</i>&nbsp;    private SeriarAnuncioUI ui;
+<b class="nc"><i>31</i>&nbsp;    private int maxTentativas = 3;</b>
+<i>32</i>&nbsp;    @FXML
+<i>33</i>&nbsp;    private TextField emailUtilizador;
+<i>34</i>&nbsp;    @FXML
+<i>35</i>&nbsp;    private PasswordField passUtilizador;
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;    /**
+<i>38</i>&nbsp;     * Inicializa.
+<i>39</i>&nbsp;     *
+<i>40</i>&nbsp;     * @param url url
+<i>41</i>&nbsp;     * @param rb  rb
+<i>42</i>&nbsp;     */
+<i>43</i>&nbsp;    @Override
+<i>44</i>&nbsp;    public void initialize(URL url, ResourceBundle rb) {
+<i>45</i>&nbsp;        try {
+<b class="nc"><i>46</i>&nbsp;            appController = new AutenticacaoController();</b>
+<b class="nc"><i>47</i>&nbsp;            ui = new SeriarAnuncioUI();</b>
+<i>48</i>&nbsp;
+<b class="nc"><i>49</i>&nbsp;            seriarAnuncioStage = new Stage();</b>
+<b class="nc"><i>50</i>&nbsp;            seriarAnuncioStage.initModality(Modality.APPLICATION_MODAL);</b>
+<i>51</i>&nbsp;
+<b class="nc"><i>52</i>&nbsp;            seriarAnuncioStage.setTitle(&quot;Seriar Anúncio&quot;);</b>
+<b class="nc"><i>53</i>&nbsp;            seriarAnuncioStage.setResizable(false);</b>
+<i>54</i>&nbsp;
+<b class="nc"><i>55</i>&nbsp;            FXMLLoader loader = new FXMLLoader(getClass().getResource(&quot;/fxml/SeriarAnuncio.fxml&quot;));</b>
+<b class="nc"><i>56</i>&nbsp;            Parent root = loader.load();</b>
+<i>57</i>&nbsp;
+<b class="nc"><i>58</i>&nbsp;            Scene scene = new Scene(root);</b>
+<b class="nc"><i>59</i>&nbsp;            seriarAnuncioStage.setScene(scene);</b>
+<i>60</i>&nbsp;
+<b class="nc"><i>61</i>&nbsp;            ui = loader.getController();</b>
+<b class="nc"><i>62</i>&nbsp;            ui.associarParentUI(this);</b>
+<i>63</i>&nbsp;
+<b class="nc"><i>64</i>&nbsp;            seriarAnuncioStage.setOnCloseRequest(new EventHandler&lt;WindowEvent&gt;() {</b>
+<i>65</i>&nbsp;                @Override
+<i>66</i>&nbsp;                public void handle(WindowEvent event) {
+<b class="nc"><i>67</i>&nbsp;                    Alert alerta = criarAlerta(Alert.AlertType.CONFIRMATION, &quot;Confirmação da ação.&quot;, &quot;Deseja mesmo voltar ao Entrar?&quot;);</b>
+<i>68</i>&nbsp;
+<b class="nc"><i>69</i>&nbsp;                    ((Button) alerta.getDialogPane().lookupButton(ButtonType.OK)).setText(&quot;Sim&quot;);</b>
+<b class="nc"><i>70</i>&nbsp;                    ((Button) alerta.getDialogPane().lookupButton(ButtonType.CANCEL)).setText(&quot;Não&quot;);</b>
+<i>71</i>&nbsp;
+<b class="nc"><i>72</i>&nbsp;                    if (alerta.showAndWait().get() == ButtonType.CANCEL) {</b>
+<b class="nc"><i>73</i>&nbsp;                        event.consume();</b>
+<i>74</i>&nbsp;                    } else {
+<b class="nc"><i>75</i>&nbsp;                        ui.limparEReset();</b>
+<b class="nc"><i>76</i>&nbsp;                        AplicacaoPOT.getInstance().doLogout();</b>
+<i>77</i>&nbsp;                    }
+<i>78</i>&nbsp;                }
+<i>79</i>&nbsp;            });
+<b class="nc"><i>80</i>&nbsp;        } catch (IOException ex) {</b>
+<b class="nc"><i>81</i>&nbsp;            criarAlerta(Alert.AlertType.ERROR, &quot;Erro&quot;, ex.getMessage());</b>
+<b class="nc"><i>82</i>&nbsp;        }</b>
+<i>83</i>&nbsp;    }
+<i>84</i>&nbsp;
+<i>85</i>&nbsp;    /**
+<i>86</i>&nbsp;     * Botão Entrar action.
+<i>87</i>&nbsp;     */
+<i>88</i>&nbsp;    @FXML
+<i>89</i>&nbsp;    public void EntrarAction() {
+<b class="nc"><i>90</i>&nbsp;        String email = emailUtilizador.getText();</b>
+<b class="nc"><i>91</i>&nbsp;        String pass = passUtilizador.getText();</b>
+<b class="nc"><i>92</i>&nbsp;        if (email == null || pass == null || email.isEmpty() || pass.isEmpty()) {</b>
+<b class="nc"><i>93</i>&nbsp;            criarAlerta(Alert.AlertType.ERROR, &quot;Erro nos dados...&quot;, &quot;Os campos email e password têm de ser preenchidos!&quot;).show();</b>
+<i>94</i>&nbsp;        } else {
+<b class="nc"><i>95</i>&nbsp;            boolean sucesso = appController.doLogin(email, pass);</b>
+<b class="nc"><i>96</i>&nbsp;            if (!sucesso) {</b>
+<b class="nc"><i>97</i>&nbsp;                if (maxTentativas == 0) {</b>
+<b class="nc"><i>98</i>&nbsp;                    maxTentativas = 3;</b>
+<i>99</i>&nbsp;                }
+<b class="nc"><i>100</i>&nbsp;                maxTentativas--;</b>
+<b class="nc"><i>101</i>&nbsp;                criarAlerta(Alert.AlertType.ERROR, &quot;Erro nos dados...&quot;, &quot;O email ou password estão incorretos!\nTem mais &quot; + maxTentativas + &quot; tentativas!&quot;).show();</b>
+<b class="nc"><i>102</i>&nbsp;                emailUtilizador.clear();</b>
+<b class="nc"><i>103</i>&nbsp;                passUtilizador.clear();</b>
+<i>104</i>&nbsp;            } else {
+<b class="nc"><i>105</i>&nbsp;                emailUtilizador.clear();</b>
+<b class="nc"><i>106</i>&nbsp;                passUtilizador.clear();</b>
+<b class="nc"><i>107</i>&nbsp;                redirecionaParaStage(appController.getPapeisUtilizador());</b>
+<i>108</i>&nbsp;            }
+<i>109</i>&nbsp;        }
+<i>110</i>&nbsp;    }
+<i>111</i>&nbsp;
+<i>112</i>&nbsp;    /**
+<i>113</i>&nbsp;     * Redireciona para os Stages.
+<i>114</i>&nbsp;     *
+<i>115</i>&nbsp;     * @param papeis papeis do utilizador
+<i>116</i>&nbsp;     */
+<i>117</i>&nbsp;    private void redirecionaParaStage(List&lt;PapelUtilizador&gt; papeis) {
+<b class="nc"><i>118</i>&nbsp;        if (papeis == null) {</b>
+<b class="nc"><i>119</i>&nbsp;            System.out.println(&quot;O utilizador não tem atribuído nenhum papel/função.&quot;);</b>
+<i>120</i>&nbsp;            return;
+<i>121</i>&nbsp;        }
+<b class="nc"><i>122</i>&nbsp;        if (papeis.isEmpty()) {</b>
+<b class="nc"><i>123</i>&nbsp;            System.out.println(&quot;O utilizador não tem atribuído nenhum papel/função.&quot;);</b>
+<i>124</i>&nbsp;            return;
+<i>125</i>&nbsp;        }
+<b class="nc"><i>126</i>&nbsp;        PapelUtilizador papel = selecionaPapel(papeis);</b>
+<i>127</i>&nbsp;
+<b class="nc"><i>128</i>&nbsp;        if (papel.hasId(&quot;COLABORADOR_ORGANIZACAO&quot;)) {</b>
+<b class="nc"><i>129</i>&nbsp;            seriarAnuncioStage.getIcons().add(new Image(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9HHeeBYer-D8uNhIAaDy21bPA5-EnzwSMaHdcIBGGMAD3xrOgkA&amp;s%22)&quot;));</b>
+<b class="nc"><i>130</i>&nbsp;            seriarAnuncioStage.show();</b>
+<i>131</i>&nbsp;        }
+<i>132</i>&nbsp;    }
+<i>133</i>&nbsp;
+<i>134</i>&nbsp;    /**
+<i>135</i>&nbsp;     * Seleciona papel.
+<i>136</i>&nbsp;     *
+<i>137</i>&nbsp;     * @param papeis papeis do utilizador
+<i>138</i>&nbsp;     * @return papel do utilizador
+<i>139</i>&nbsp;     */
+<i>140</i>&nbsp;    private PapelUtilizador selecionaPapel(List&lt;PapelUtilizador&gt; papeis) {
+<b class="nc"><i>141</i>&nbsp;        return papeis.get(0);</b>
+<i>142</i>&nbsp;    }
+<i>143</i>&nbsp;
+<i>144</i>&nbsp;    private Alert criarAlerta(Alert.AlertType tipoAlerta, String cabecalho, String mensagem) {
+<b class="nc"><i>145</i>&nbsp;        Alert alerta = new Alert(tipoAlerta);</b>
+<i>146</i>&nbsp;
+<b class="nc"><i>147</i>&nbsp;        alerta.setTitle(&quot;                                                    T4J&quot;);</b>
+<b class="nc"><i>148</i>&nbsp;        alerta.setHeaderText(cabecalho);</b>
+<b class="nc"><i>149</i>&nbsp;        alerta.setContentText(mensagem);</b>
+<b class="nc"><i>150</i>&nbsp;        Stage stage = (Stage) alerta.getDialogPane().getScene().getWindow();</b>
+<b class="nc"><i>151</i>&nbsp;        stage.getIcons().add(new Image(&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9HHeeBYer-D8uNhIAaDy21bPA5-EnzwSMaHdcIBGGMAD3xrOgkA&amp;s%22)&quot;));</b>
+<i>152</i>&nbsp;
+<b class="nc"><i>153</i>&nbsp;        return alerta;</b>
+<i>154</i>&nbsp;    }
+<i>155</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

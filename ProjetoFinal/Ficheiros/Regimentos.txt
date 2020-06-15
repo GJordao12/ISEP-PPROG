@@ -1,0 +1,3 @@
+Descrição;Descrição Regras;
+
+Seriação 1;Maior média dos níveis de proficiência em cada uma das competências técnicas exigidas para a tarefa -> Preço mais baixo -> Proposta registada mais cedo;Seriação 2;Maior média dos níveis de proficiência em cada uma das competências técnicas exigidas para a tarefa -> Menor desvio padrão dos níveis de	proficiência em cada uma das competências técnicas exigidas para a tarefa -> Preço mais baixo -> Proposta registada mais cedo;

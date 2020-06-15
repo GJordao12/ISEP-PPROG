@@ -1,0 +1,129 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: SeriarAnuncioController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.controller.scene</a> ]
+</div>
+
+<h1>Coverage Summary for Class: SeriarAnuncioController (pt.ipp.isep.dei.esoft.pot.controller.scene)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SeriarAnuncioController</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 6)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.controller.scene;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.controller.console.AplicacaoPOT;
+<i>4</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Anuncio;
+<i>5</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Candidatura;
+<i>6</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Colaborador;
+<i>7</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Regimento;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import java.util.List;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;/**
+<i>12</i>&nbsp; * Seriar Anúncio Controller.
+<i>13</i>&nbsp; */
+<b class="nc"><i>14</i>&nbsp;public class SeriarAnuncioController {</b>
+<i>15</i>&nbsp;
+<i>16</i>&nbsp;    /**
+<i>17</i>&nbsp;     * Devolve a lista de candidaturas ordenada.
+<i>18</i>&nbsp;     *
+<i>19</i>&nbsp;     * @param anun Anúncio
+<i>20</i>&nbsp;     * @return lista de candidaturas ordenada
+<i>21</i>&nbsp;     */
+<i>22</i>&nbsp;    public List&lt;Candidatura&gt; getListaOrdenada(Anuncio anun) {
+<b class="nc"><i>23</i>&nbsp;        Regimento reg = anun.getRegT();</b>
+<b class="nc"><i>24</i>&nbsp;        return reg.Seriar(anun);</b>
+<i>25</i>&nbsp;    }
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    /**
+<i>28</i>&nbsp;     * Devolve a lista de candidaturas de um Anúncio.
+<i>29</i>&nbsp;     *
+<i>30</i>&nbsp;     * @param anun Anúncio
+<i>31</i>&nbsp;     * @return lista de candidaturas de um Anúncio
+<i>32</i>&nbsp;     */
+<i>33</i>&nbsp;    public List&lt;Candidatura&gt; getCandidaturas(Anuncio anun) {
+<b class="nc"><i>34</i>&nbsp;        return anun.getM_oListaCandidaturas().getCandidaturas();</b>
+<i>35</i>&nbsp;    }
+<i>36</i>&nbsp;
+<i>37</i>&nbsp;    /**
+<i>38</i>&nbsp;     * Devolve a lista de Anúncios.
+<i>39</i>&nbsp;     *
+<i>40</i>&nbsp;     * @return lista de Anúncios
+<i>41</i>&nbsp;     */
+<i>42</i>&nbsp;    public List&lt;Anuncio&gt; getAnuncios() {
+<b class="nc"><i>43</i>&nbsp;        Colaborador colab = AplicacaoPOT.getInstance().getPlataforma().getRegistoOrganizacoes().getOrganizacaoByEmailUtilizador(AplicacaoPOT.getInstance().getSessaoAtual().getEmailUtilizador()).getListaColaboradores().getColaboradorByEmail(AplicacaoPOT.getInstance().getSessaoAtual().getEmailUtilizador());</b>
+<b class="nc"><i>44</i>&nbsp;        return AplicacaoPOT.getInstance().getPlataforma().getRegistoAnuncios().getAnunciosParaSeriarAutomaticos(colab);</b>
+<i>45</i>&nbsp;    }
+<i>46</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

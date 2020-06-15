@@ -1,0 +1,197 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Plataforma</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Plataforma (pt.ipp.isep.dei.esoft.pot.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Plataforma</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (9/ 9)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    95,5%
+  </span>
+  <span class="absValue">
+    (21/ 22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.autorizacao.AutorizacaoFacade;
+<i>4</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.registo.*;
+<i>5</i>&nbsp;
+<i>6</i>&nbsp;/**
+<i>7</i>&nbsp; * Plataforma.
+<i>8</i>&nbsp; */
+<i>9</i>&nbsp;public class Plataforma {
+<i>10</i>&nbsp;    private final AutorizacaoFacade m_oAutorizacao;
+<i>11</i>&nbsp;    private final RegistoOrganizacoes m_oRegistoOrganizacoes;
+<i>12</i>&nbsp;    private final RegistoAreasAtividade m_oRegistoAreasAtividade;
+<i>13</i>&nbsp;    private final RegistoCompetenciasTecnicas m_oRegistoCompetenciasTecnicas;
+<i>14</i>&nbsp;    private final RegistoCategorias m_oRegistoCategorias;
+<i>15</i>&nbsp;    private final RegistoFreelancer m_oRegistoFreelancer;
+<i>16</i>&nbsp;    private final RegistoAnuncios m_oRegistoAnuncios;
+<i>17</i>&nbsp;    private final RegistoTiposRegimento m_oRegistoTiposRegimento;
+<i>18</i>&nbsp;    private String m_strDesignacao;
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    /**
+<i>21</i>&nbsp;     * Instancia uma nova Plataforma.
+<i>22</i>&nbsp;     *
+<i>23</i>&nbsp;     * @param strDesignacao designação
+<i>24</i>&nbsp;     */
+<b class="fc"><i>25</i>&nbsp;    public Plataforma(String strDesignacao) {</b>
+<b class="fc"><i>26</i>&nbsp;        if ((strDesignacao == null) ||</b>
+<b class="fc"><i>27</i>&nbsp;                (strDesignacao.isEmpty()))</b>
+<b class="nc"><i>28</i>&nbsp;            throw new IllegalArgumentException(&quot;Nenhum dos argumentos pode ser nulo ou vazio.&quot;);</b>
+<i>29</i>&nbsp;
+<b class="fc"><i>30</i>&nbsp;        this.m_strDesignacao = strDesignacao;</b>
+<i>31</i>&nbsp;
+<b class="fc"><i>32</i>&nbsp;        this.m_oAutorizacao = new AutorizacaoFacade();</b>
+<i>33</i>&nbsp;
+<b class="fc"><i>34</i>&nbsp;        this.m_oRegistoOrganizacoes = new RegistoOrganizacoes(this.getAutorizacaoFacade());</b>
+<b class="fc"><i>35</i>&nbsp;        this.m_oRegistoAreasAtividade = new RegistoAreasAtividade();</b>
+<b class="fc"><i>36</i>&nbsp;        this.m_oRegistoCompetenciasTecnicas = new RegistoCompetenciasTecnicas();</b>
+<b class="fc"><i>37</i>&nbsp;        this.m_oRegistoCategorias = new RegistoCategorias();</b>
+<b class="fc"><i>38</i>&nbsp;        this.m_oRegistoFreelancer = new RegistoFreelancer(this.getAutorizacaoFacade());</b>
+<b class="fc"><i>39</i>&nbsp;        this.m_oRegistoAnuncios = new RegistoAnuncios();</b>
+<b class="fc"><i>40</i>&nbsp;        this.m_oRegistoTiposRegimento = new RegistoTiposRegimento();</b>
+<b class="fc"><i>41</i>&nbsp;    }</b>
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;    /**
+<i>44</i>&nbsp;     * Devolve a Autorização Facade.
+<i>45</i>&nbsp;     *
+<i>46</i>&nbsp;     * @return autorização facade
+<i>47</i>&nbsp;     */
+<i>48</i>&nbsp;    public AutorizacaoFacade getAutorizacaoFacade() {
+<b class="fc"><i>49</i>&nbsp;        return this.m_oAutorizacao;</b>
+<i>50</i>&nbsp;    }
+<i>51</i>&nbsp;
+<i>52</i>&nbsp;    /**
+<i>53</i>&nbsp;     * Devolve o Registo das organizações.
+<i>54</i>&nbsp;     *
+<i>55</i>&nbsp;     * @return registo organizações
+<i>56</i>&nbsp;     */
+<i>57</i>&nbsp;    public RegistoOrganizacoes getRegistoOrganizacoes() {
+<b class="fc"><i>58</i>&nbsp;        return this.m_oRegistoOrganizacoes;</b>
+<i>59</i>&nbsp;    }
+<i>60</i>&nbsp;
+<i>61</i>&nbsp;    /**
+<i>62</i>&nbsp;     * Devolve o Registo de Categorias.
+<i>63</i>&nbsp;     *
+<i>64</i>&nbsp;     * @return registo categorias
+<i>65</i>&nbsp;     */
+<i>66</i>&nbsp;    public RegistoCategorias getRegistoCategorias() {
+<b class="fc"><i>67</i>&nbsp;        return this.m_oRegistoCategorias;</b>
+<i>68</i>&nbsp;    }
+<i>69</i>&nbsp;
+<i>70</i>&nbsp;    /**
+<i>71</i>&nbsp;     * Devolve o Registo de Areas de Atividade.
+<i>72</i>&nbsp;     *
+<i>73</i>&nbsp;     * @return registo areas atividade
+<i>74</i>&nbsp;     */
+<i>75</i>&nbsp;    public RegistoAreasAtividade getRegistoAreaAtividade() {
+<b class="fc"><i>76</i>&nbsp;        return this.m_oRegistoAreasAtividade;</b>
+<i>77</i>&nbsp;    }
+<i>78</i>&nbsp;
+<i>79</i>&nbsp;    /**
+<i>80</i>&nbsp;     * Devolve o Registo de Competências Técnicas.
+<i>81</i>&nbsp;     *
+<i>82</i>&nbsp;     * @return registo competências técnicas
+<i>83</i>&nbsp;     */
+<i>84</i>&nbsp;    public RegistoCompetenciasTecnicas getRegistoCT() {
+<b class="fc"><i>85</i>&nbsp;        return this.m_oRegistoCompetenciasTecnicas;</b>
+<i>86</i>&nbsp;    }
+<i>87</i>&nbsp;
+<i>88</i>&nbsp;    /**
+<i>89</i>&nbsp;     * Devolve o Registo do Freelancer.
+<i>90</i>&nbsp;     *
+<i>91</i>&nbsp;     * @return registo freelancer
+<i>92</i>&nbsp;     */
+<i>93</i>&nbsp;    public RegistoFreelancer getRegistoFreelancer() {
+<b class="fc"><i>94</i>&nbsp;        return this.m_oRegistoFreelancer;</b>
+<i>95</i>&nbsp;    }
+<i>96</i>&nbsp;
+<i>97</i>&nbsp;    /**
+<i>98</i>&nbsp;     * Devolve o Registo de Anúncios.
+<i>99</i>&nbsp;     *
+<i>100</i>&nbsp;     * @return registo anúncios
+<i>101</i>&nbsp;     */
+<i>102</i>&nbsp;    public RegistoAnuncios getRegistoAnuncios() {
+<b class="fc"><i>103</i>&nbsp;        return this.m_oRegistoAnuncios;</b>
+<i>104</i>&nbsp;    }
+<i>105</i>&nbsp;
+<i>106</i>&nbsp;    /**
+<i>107</i>&nbsp;     * Devolve o Registo dos tipos de regimento.
+<i>108</i>&nbsp;     *
+<i>109</i>&nbsp;     * @return registo tipos regimento
+<i>110</i>&nbsp;     */
+<i>111</i>&nbsp;    public RegistoTiposRegimento getRegistoTiposRegimento() {
+<b class="fc"><i>112</i>&nbsp;        return this.m_oRegistoTiposRegimento;</b>
+<i>113</i>&nbsp;    }
+<i>114</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

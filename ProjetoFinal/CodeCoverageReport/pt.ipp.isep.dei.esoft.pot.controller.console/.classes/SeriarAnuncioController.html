@@ -1,0 +1,175 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: SeriarAnuncioController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.controller.console</a> ]
+</div>
+
+<h1>Coverage Summary for Class: SeriarAnuncioController (pt.ipp.isep.dei.esoft.pot.controller.console)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">SeriarAnuncioController</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 21)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.controller.console;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.autorizacao.model.SessaoUtilizador;
+<i>4</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.*;
+<i>5</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.lista.ListaCandidaturas;
+<i>6</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.lista.ListaColaboradores;
+<i>7</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.registo.RegistoAnuncios;
+<i>8</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.registo.RegistoOrganizacoes;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import java.util.List;
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;/**
+<i>13</i>&nbsp; * Seriar Anúncio Controller.
+<i>14</i>&nbsp; */
+<i>15</i>&nbsp;public class SeriarAnuncioController {
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    private final Plataforma m_oPlataforma;
+<i>18</i>&nbsp;    private RegistoOrganizacoes rorgs;
+<i>19</i>&nbsp;    private RegistoAnuncios ra;
+<i>20</i>&nbsp;    private Anuncio m_oAnuncio;
+<i>21</i>&nbsp;    private Colaborador colab;
+<i>22</i>&nbsp;    private ProcessoSeriacao ps;
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    /**
+<i>25</i>&nbsp;     * Instancia um novo Seriar Anúncio Controller.
+<i>26</i>&nbsp;     */
+<b class="nc"><i>27</i>&nbsp;    public SeriarAnuncioController() {</b>
+<i>28</i>&nbsp;
+<b class="nc"><i>29</i>&nbsp;        if (!AplicacaoPOT.getInstance().getSessaoAtual().isLoggedInComPapel(Constantes.PAPEL_COLABORADOR_ORGANIZACAO))</b>
+<b class="nc"><i>30</i>&nbsp;            throw new IllegalStateException(&quot;Utilizador não Autorizado&quot;);</b>
+<b class="nc"><i>31</i>&nbsp;        this.m_oPlataforma = AplicacaoPOT.getInstance().getPlataforma();</b>
+<b class="nc"><i>32</i>&nbsp;        this.rorgs = this.m_oPlataforma.getRegistoOrganizacoes();</b>
+<b class="nc"><i>33</i>&nbsp;        this.ra = this.m_oPlataforma.getRegistoAnuncios();</b>
+<i>34</i>&nbsp;    }
+<i>35</i>&nbsp;
+<i>36</i>&nbsp;    /**
+<i>37</i>&nbsp;     * Devolve anúncios para Seriar automáticos.
+<i>38</i>&nbsp;     *
+<i>39</i>&nbsp;     * @return anúncios para seriar automáticos
+<i>40</i>&nbsp;     */
+<i>41</i>&nbsp;    public List&lt;Anuncio&gt; getAnunciosParaSeriarAutomaticos() {
+<b class="nc"><i>42</i>&nbsp;        AplicacaoPOT app = AplicacaoPOT.getInstance();</b>
+<b class="nc"><i>43</i>&nbsp;        SessaoUtilizador sessao = app.getSessaoAtual();</b>
+<b class="nc"><i>44</i>&nbsp;        String strEmailUtilizador = sessao.getEmailUtilizador();</b>
+<b class="nc"><i>45</i>&nbsp;        Organizacao org = this.rorgs.getOrganizacaoByEmailUtilizador(strEmailUtilizador);</b>
+<b class="nc"><i>46</i>&nbsp;        ListaColaboradores lstColabs = org.getListaColaboradores();</b>
+<b class="nc"><i>47</i>&nbsp;        this.colab = lstColabs.getColaboradorByEmail(strEmailUtilizador);</b>
+<b class="nc"><i>48</i>&nbsp;        return this.ra.getAnunciosParaSeriarAutomaticos(this.colab);</b>
+<i>49</i>&nbsp;    }
+<i>50</i>&nbsp;
+<i>51</i>&nbsp;    /**
+<i>52</i>&nbsp;     * Devolve uma lista de candidaturas.
+<i>53</i>&nbsp;     *
+<i>54</i>&nbsp;     * @param anuncioId anuncio id
+<i>55</i>&nbsp;     * @return candidaturas
+<i>56</i>&nbsp;     */
+<i>57</i>&nbsp;    public List&lt;Candidatura&gt; getCandidaturas(String anuncioId) {
+<b class="nc"><i>58</i>&nbsp;        this.m_oAnuncio = this.ra.getAnuncioByIdEColab(anuncioId, this.colab);</b>
+<b class="nc"><i>59</i>&nbsp;        ListaCandidaturas listaCand = this.m_oAnuncio.getM_oListaCandidaturas();</b>
+<b class="nc"><i>60</i>&nbsp;        this.ps = this.m_oAnuncio.novoProcessoSeriacao(this.colab);</b>
+<b class="nc"><i>61</i>&nbsp;        return listaCand.getCandidaturas();</b>
+<i>62</i>&nbsp;    }
+<i>63</i>&nbsp;
+<i>64</i>&nbsp;    /**
+<i>65</i>&nbsp;     * Devolve a lista Ordenada.
+<i>66</i>&nbsp;     *
+<i>67</i>&nbsp;     * @return lista ordenada
+<i>68</i>&nbsp;     */
+<i>69</i>&nbsp;    public List&lt;Candidatura&gt; getListaOrdenada() {
+<b class="nc"><i>70</i>&nbsp;        Regimento reg = this.m_oAnuncio.getRegT();</b>
+<b class="nc"><i>71</i>&nbsp;        return reg.Seriar(this.m_oAnuncio);</b>
+<i>72</i>&nbsp;    }
+<i>73</i>&nbsp;
+<i>74</i>&nbsp;    /**
+<i>75</i>&nbsp;     * Regista a seriação.
+<i>76</i>&nbsp;     *
+<i>77</i>&nbsp;     * @return boolean
+<i>78</i>&nbsp;     */
+<i>79</i>&nbsp;    public boolean registaSeriacao() {
+<b class="nc"><i>80</i>&nbsp;        return this.m_oAnuncio.registaProcessoSeriacao(this.ps);</b>
+<i>81</i>&nbsp;    }
+<i>82</i>&nbsp;
+<i>83</i>&nbsp;    /**
+<i>84</i>&nbsp;     * Devolve a Seriação.
+<i>85</i>&nbsp;     *
+<i>86</i>&nbsp;     * @return toString da Seriação
+<i>87</i>&nbsp;     */
+<i>88</i>&nbsp;    public String getSeriacaoString() {
+<b class="nc"><i>89</i>&nbsp;        return this.ps.toString();</b>
+<i>90</i>&nbsp;    }
+<i>91</i>&nbsp;}
+<i>92</i>&nbsp;
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

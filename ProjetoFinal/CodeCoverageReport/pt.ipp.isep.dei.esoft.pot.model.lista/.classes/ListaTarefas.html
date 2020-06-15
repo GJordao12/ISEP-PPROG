@@ -1,0 +1,191 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: ListaTarefas</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.model.lista</a> ]
+</div>
+
+<h1>Coverage Summary for Class: ListaTarefas (pt.ipp.isep.dei.esoft.pot.model.lista)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">ListaTarefas</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    91,7%
+  </span>
+  <span class="absValue">
+    (22/ 24)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.model.lista;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Categoria;
+<i>4</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Colaborador;
+<i>5</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Tarefa;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;import java.util.ArrayList;
+<i>8</i>&nbsp;import java.util.List;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;/**
+<i>11</i>&nbsp; * Lista de Tarefas.
+<i>12</i>&nbsp; */
+<i>13</i>&nbsp;public class ListaTarefas {
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    private List&lt;Tarefa&gt; m_lstTarefas;
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    /**
+<i>18</i>&nbsp;     * Instancia uma nova Lista de tarefas.
+<i>19</i>&nbsp;     */
+<b class="fc"><i>20</i>&nbsp;    public ListaTarefas() {</b>
+<b class="fc"><i>21</i>&nbsp;        this.m_lstTarefas = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i>22</i>&nbsp;    }</b>
+<i>23</i>&nbsp;
+<i>24</i>&nbsp;    /**
+<i>25</i>&nbsp;     * Constrói uma nova tarefa através do construtor da classe Tarefa.
+<i>26</i>&nbsp;     *
+<i>27</i>&nbsp;     * @param strRefUnica     referência única
+<i>28</i>&nbsp;     * @param strDesig        designação
+<i>29</i>&nbsp;     * @param strDescInformal descrição informal
+<i>30</i>&nbsp;     * @param strCaracTecnico carácter técnico
+<i>31</i>&nbsp;     * @param strDuracao      duração
+<i>32</i>&nbsp;     * @param strCusto        custo
+<i>33</i>&nbsp;     * @param oCatTarefa      categoria de tarefa
+<i>34</i>&nbsp;     * @return tarefa
+<i>35</i>&nbsp;     */
+<i>36</i>&nbsp;    public Tarefa novaTarefa(String strRefUnica, String strDesig, String strDescInformal, String strCaracTecnico, String strDuracao, String strCusto, Categoria oCatTarefa) {
+<i>37</i>&nbsp;
+<b class="fc"><i>38</i>&nbsp;        return new Tarefa(strRefUnica, strDesig, strDescInformal, strCaracTecnico, strDuracao, strCusto, oCatTarefa);</b>
+<i>39</i>&nbsp;    }
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    /**
+<i>42</i>&nbsp;     * Regista a tarefa.
+<i>43</i>&nbsp;     *
+<i>44</i>&nbsp;     * @param oTarefa tarefa
+<i>45</i>&nbsp;     * @return boolean
+<i>46</i>&nbsp;     */
+<i>47</i>&nbsp;    public boolean registaTarefa(Tarefa oTarefa) {
+<i>48</i>&nbsp;
+<b class="fc"><i>49</i>&nbsp;        if (this.validaTarefa(oTarefa)) {</b>
+<b class="fc"><i>50</i>&nbsp;            return addTarefa(oTarefa);</b>
+<i>51</i>&nbsp;        }
+<b class="nc"><i>52</i>&nbsp;        return false;</b>
+<i>53</i>&nbsp;    }
+<i>54</i>&nbsp;
+<i>55</i>&nbsp;    private boolean addTarefa(Tarefa oTarefa) {
+<i>56</i>&nbsp;
+<b class="fc"><i>57</i>&nbsp;        return this.m_lstTarefas.add(oTarefa);</b>
+<i>58</i>&nbsp;    }
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;    /**
+<i>61</i>&nbsp;     * Valida a tarefa.
+<i>62</i>&nbsp;     *
+<i>63</i>&nbsp;     * @param oTarefa tarefa
+<i>64</i>&nbsp;     * @return boolean
+<i>65</i>&nbsp;     */
+<i>66</i>&nbsp;    public boolean validaTarefa(Tarefa oTarefa) {
+<i>67</i>&nbsp;
+<b class="fc"><i>68</i>&nbsp;        boolean bRet = true;</b>
+<b class="fc"><i>69</i>&nbsp;        if (this.m_lstTarefas.contains(oTarefa))</b>
+<b class="fc"><i>70</i>&nbsp;            bRet = false;</b>
+<i>71</i>&nbsp;
+<b class="fc"><i>72</i>&nbsp;        return bRet;</b>
+<i>73</i>&nbsp;    }
+<i>74</i>&nbsp;
+<i>75</i>&nbsp;    /**
+<i>76</i>&nbsp;     * Devolve a lista de tarefas que sejam para publicar.
+<i>77</i>&nbsp;     *
+<i>78</i>&nbsp;     * @param c colaborador
+<i>79</i>&nbsp;     * @return tarefas para publicar
+<i>80</i>&nbsp;     */
+<i>81</i>&nbsp;    public List&lt;Tarefa&gt; getTarefasParaPublicar(Colaborador c) {
+<b class="fc"><i>82</i>&nbsp;        List&lt;Tarefa&gt; lst = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i>83</i>&nbsp;        for (Tarefa tar : this.m_lstTarefas) {</b>
+<b class="fc"><i>84</i>&nbsp;            if (tar.getColab().equals(c)) {</b>
+<b class="fc"><i>85</i>&nbsp;                lst.add(tar);</b>
+<i>86</i>&nbsp;            }
+<b class="fc"><i>87</i>&nbsp;        }</b>
+<b class="fc"><i>88</i>&nbsp;        return lst;</b>
+<i>89</i>&nbsp;    }
+<i>90</i>&nbsp;
+<i>91</i>&nbsp;    /**
+<i>92</i>&nbsp;     * Devolve as tarefas para publicar através da referência.
+<i>93</i>&nbsp;     *
+<i>94</i>&nbsp;     * @param ref referencia
+<i>95</i>&nbsp;     * @param c   colaborador
+<i>96</i>&nbsp;     * @return tarefas para publicar
+<i>97</i>&nbsp;     */
+<i>98</i>&nbsp;    public Tarefa getTarefasParaPublicarByRef(String ref, Colaborador c) {
+<b class="fc"><i>99</i>&nbsp;        List&lt;Tarefa&gt; lst = getTarefasParaPublicar(c);</b>
+<b class="fc"><i>100</i>&nbsp;        for (Tarefa tar : lst) {</b>
+<b class="fc"><i>101</i>&nbsp;            if (tar.getM_strReferenciaUnica().equals(ref)) {</b>
+<b class="fc"><i>102</i>&nbsp;                return tar;</b>
+<i>103</i>&nbsp;            }
+<b class="fc"><i>104</i>&nbsp;        }</b>
+<b class="nc"><i>105</i>&nbsp;        return null;</b>
+<i>106</i>&nbsp;    }
+<i>107</i>&nbsp;}
+<i>108</i>&nbsp;
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

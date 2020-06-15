@@ -1,0 +1,196 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: RegistoFreelancer</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.model.registo</a> ]
+</div>
+
+<h1>Coverage Summary for Class: RegistoFreelancer (pt.ipp.isep.dei.esoft.pot.model.registo)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">RegistoFreelancer</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    91,3%
+  </span>
+  <span class="absValue">
+    (21/ 23)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.model.registo;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.autorizacao.AutorizacaoFacade;
+<i>4</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.interfaces.AlgoritmoGeradorPasswords;
+<i>5</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Constantes;
+<i>6</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.EnderecoPostal;
+<i>7</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Freelancer;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import java.util.ArrayList;
+<i>10</i>&nbsp;import java.util.List;
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;/**
+<i>13</i>&nbsp; * Registo de Freelancer.
+<i>14</i>&nbsp; */
+<i>15</i>&nbsp;public class RegistoFreelancer implements AlgoritmoGeradorPasswords {
+<i>16</i>&nbsp;
+<i>17</i>&nbsp;    private final AutorizacaoFacade m_oAutorizacao;
+<i>18</i>&nbsp;    private List&lt;Freelancer&gt; m_lstFreelancers;
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    /**
+<i>21</i>&nbsp;     * Instancia um novo Registo de um Freelancer.
+<i>22</i>&nbsp;     *
+<i>23</i>&nbsp;     * @param m_oAutorizacao autorização
+<i>24</i>&nbsp;     */
+<b class="fc"><i>25</i>&nbsp;    public RegistoFreelancer(AutorizacaoFacade m_oAutorizacao) {</b>
+<b class="fc"><i>26</i>&nbsp;        this.m_oAutorizacao = m_oAutorizacao;</b>
+<b class="fc"><i>27</i>&nbsp;        this.m_lstFreelancers = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i>28</i>&nbsp;    }</b>
+<i>29</i>&nbsp;
+<i>30</i>&nbsp;    /**
+<i>31</i>&nbsp;     * Constrói um novo Freelancer através do construtor da classe Freelancer.
+<i>32</i>&nbsp;     *
+<i>33</i>&nbsp;     * @param nome      nome
+<i>34</i>&nbsp;     * @param nif       NIF
+<i>35</i>&nbsp;     * @param endPostal endereço postal
+<i>36</i>&nbsp;     * @param tele      telemóvel
+<i>37</i>&nbsp;     * @param email     email
+<i>38</i>&nbsp;     * @return freelancer
+<i>39</i>&nbsp;     */
+<i>40</i>&nbsp;    public Freelancer novoFreelancer(String nome, int nif, EnderecoPostal endPostal, int tele, String email) {
+<b class="fc"><i>41</i>&nbsp;        return new Freelancer(nome, nif, endPostal, tele, email);</b>
+<i>42</i>&nbsp;    }
+<i>43</i>&nbsp;
+<i>44</i>&nbsp;    /**
+<i>45</i>&nbsp;     * Adiciona um freelancer recebido por parâmetro à lista de Freelancers.
+<i>46</i>&nbsp;     *
+<i>47</i>&nbsp;     * @param fr freelancer
+<i>48</i>&nbsp;     * @return boolean
+<i>49</i>&nbsp;     */
+<i>50</i>&nbsp;    public boolean addFreelancer(Freelancer fr) {
+<b class="fc"><i>51</i>&nbsp;        return this.m_lstFreelancers.add(fr);</b>
+<i>52</i>&nbsp;    }
+<i>53</i>&nbsp;
+<i>54</i>&nbsp;    /**
+<i>55</i>&nbsp;     * Regista um freelancer recebido por parâmetro.
+<i>56</i>&nbsp;     *
+<i>57</i>&nbsp;     * @param fr freelancer
+<i>58</i>&nbsp;     * @return boolean
+<i>59</i>&nbsp;     */
+<i>60</i>&nbsp;    public boolean registaFreelancer(Freelancer fr) {
+<i>61</i>&nbsp;
+<b class="fc"><i>62</i>&nbsp;        if (validaFreelancer(fr)) {</b>
+<b class="fc"><i>63</i>&nbsp;            String nome = fr.getM_oNome();</b>
+<b class="fc"><i>64</i>&nbsp;            String email = fr.getM_oEmail();</b>
+<b class="fc"><i>65</i>&nbsp;            String strPwd = this.geraPassword(nome, email);</b>
+<b class="fc"><i>66</i>&nbsp;            if (this.m_oAutorizacao.registaUtilizadorComPapeis(nome, email, strPwd,</b>
+<i>67</i>&nbsp;                    new String[]{Constantes.PAPEL_FREELANCER}))
+<b class="fc"><i>68</i>&nbsp;                return addFreelancer(fr);</b>
+<i>69</i>&nbsp;        }
+<b class="nc"><i>70</i>&nbsp;        return false;</b>
+<i>71</i>&nbsp;    }
+<i>72</i>&nbsp;
+<i>73</i>&nbsp;    /**
+<i>74</i>&nbsp;     * Valida um freelancer recebido por parâmetro.
+<i>75</i>&nbsp;     *
+<i>76</i>&nbsp;     * @param freelancer freelancer
+<i>77</i>&nbsp;     * @return boolean
+<i>78</i>&nbsp;     */
+<i>79</i>&nbsp;    public boolean validaFreelancer(Freelancer freelancer) {
+<b class="fc"><i>80</i>&nbsp;        boolean bRet = true;</b>
+<i>81</i>&nbsp;
+<b class="fc"><i>82</i>&nbsp;        if (this.m_oAutorizacao.existeUtilizador(freelancer.getM_oEmail())) {</b>
+<b class="fc"><i>83</i>&nbsp;            bRet = false;</b>
+<i>84</i>&nbsp;        }
+<b class="fc"><i>85</i>&nbsp;        return bRet;</b>
+<i>86</i>&nbsp;    }
+<i>87</i>&nbsp;
+<i>88</i>&nbsp;    /**
+<i>89</i>&nbsp;     * Gera a password do Freelancer.
+<i>90</i>&nbsp;     *
+<i>91</i>&nbsp;     * @param nome  Nome do Freelancer
+<i>92</i>&nbsp;     * @param email Email do Freelancer
+<i>93</i>&nbsp;     * @return password
+<i>94</i>&nbsp;     */
+<i>95</i>&nbsp;    public String geraPassword(String nome, String email) {
+<b class="fc"><i>96</i>&nbsp;        return nome + &quot;123&quot;;</b>
+<i>97</i>&nbsp;    }
+<i>98</i>&nbsp;
+<i>99</i>&nbsp;    /**
+<i>100</i>&nbsp;     * Devolve um freelancer através do email.
+<i>101</i>&nbsp;     *
+<i>102</i>&nbsp;     * @param email email
+<i>103</i>&nbsp;     * @return freelancer
+<i>104</i>&nbsp;     */
+<i>105</i>&nbsp;    public Freelancer getFreelancerByEmail(String email) {
+<b class="fc"><i>106</i>&nbsp;        for (Freelancer free : this.m_lstFreelancers) {</b>
+<b class="fc"><i>107</i>&nbsp;            if (free.getM_oEmail().equals(email)) {</b>
+<b class="fc"><i>108</i>&nbsp;                return free;</b>
+<i>109</i>&nbsp;            }
+<b class="fc"><i>110</i>&nbsp;        }</b>
+<b class="nc"><i>111</i>&nbsp;        return null;</b>
+<i>112</i>&nbsp;    }
+<i>113</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Anuncio Id;Data;Valor Esperado;Número de Dias;Texto Apresentativo;Texto Motivacional;Email Freelancer;
+
+12345;12-12-2014;76;23;ola sou o Júlio;bom trabalhador, preparado para qualquer tarefa;julio@gmail.com;
+12345;12-12-2014;14;22;ola sou o Rui;bom programador, focado a 100%;rui@gmail.com;
+12345;17-12-2014;76;23;ola sou o Vanessa;bom comunicador, consegue entender rápido o que é preciso;vanessa@gmail.com;
+12345;18-12-2014;12;31;ola sou o António;focado, dou o meu melhor;antonio@gmail.com;
+12345;11-12-2014;15;15;ola sou o Jordão;empenhado, e encontro rápidas soluções para os problemas;j@gmail.com;
+32145;11-12-20011;121;21;ola sou o João;bom programador, tenho 10 anos de experiência;joao@gmail.com;
+32145;11-12-20011;120;32;ola sou o Almerindo;focado, dou o meu melhor;almerindo@gmail.com;
+32145;11-12-20011;135;11;ola sou o Afonso;bom programador, tenho 22 anos de experiência;afonso@gmail.com;
+32145;12-12-20011;135;43;ola sou o José;bom comunicador, consegue entender rápido o que é preciso;jose@gmail.com;
+32145;11-12-20011;220;7;ola sou o Manel;bom programador, focado a 100%;manel@gmail.com;

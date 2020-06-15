@@ -1,0 +1,12 @@
+Nome;NIF;Local;Código Postal;Localidade;Nº Telemóvel;Email;Código Competência(s) Tecnica(s);Valor Grau(s) Proficiência;Data(s) do Reconhecimento;
+
+João;123456789;ISEP;4460-231;Porto;911111111;joao@gmail.com;1232;2;12-12-2012;
+Almerindo;987654321;São João;4456-123;Porto;933333333;almerindo@gmail.com;1232;3;12-11-2012;
+Afonso;924657389;Porto;4444-444;Senhora da Hora;922222222;afonso@gmail.com;1232;1;13-12-2012;
+José;931177389;Custóias;4444-400;Custóias;921123522;jose@gmail.com;1232;1;13-12-2012;
+Manel;921690049;Porto;4412-444;Ermesinde;912508022;manel@gmail.com;1232;2;13-12-2012;
+Rui;11124124;Avenida do Mar;4410-245;Guarda;933221234;rui@gmail.com;9021;2;12-12-2012;
+Julio;11124125;Avenida da praia;4321-044;Monsanto;931241241;julio@gmail.com;9021;2;12-12-2012;1232;3;12-12-2012;
+Vanessa;11124126;Avenida;4321-045;Monsanto;912224124;vanessa@gmail.com;9021;3;12-12-2012;
+Jordão;123123325;Avenida Matosinhos;4321-344;Porto;911241241;j@gmail.com;9021;4;14-12-2012;1232;3;14-12-2012;
+Antonio;15554126;Avenida Sao Jose;4321-444;Porto;912221004;antonio@gmail.com;9021;3;13-12-2012;

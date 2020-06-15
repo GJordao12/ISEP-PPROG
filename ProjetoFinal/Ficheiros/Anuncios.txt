@@ -1,0 +1,5 @@
+Tarefa Referência;Id Anuncio;Data inicial de publicitação;Data final de publicitação;Data inicial de apresentação de candidaturas;Data final de apresentação de candidaturas;Data inicial de seriação;Data final de seriação;Descrição Tipo Regimento;Email Utilizador;
+
+22222;78971;7-8-2001;12-8-2001;7-8-2001;12-8-2001;7-8-2001;12-8-2001;Seriação 1;jordao@gmail.com;
+99999;12345;12-12-2000;12-12-2020;12-12-2020;12-12-2020;12-12-2000;12-12-2020;Seriação 2;jordao@gmail.com;
+11111;32145;12-12-2000;12-12-2020;12-12-2020;12-12-2020;12-12-2000;12-12-2020;Seriação 1;jordao@gmail.com;

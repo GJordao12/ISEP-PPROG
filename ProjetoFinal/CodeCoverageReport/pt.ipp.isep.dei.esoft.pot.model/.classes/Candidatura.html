@@ -1,0 +1,217 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Candidatura</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Candidatura (pt.ipp.isep.dei.esoft.pot.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Candidatura</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87,5%
+  </span>
+  <span class="absValue">
+    (7/ 8)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    94,9%
+  </span>
+  <span class="absValue">
+    (37/ 39)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.ArrayList;
+<i>4</i>&nbsp;import java.util.Date;
+<i>5</i>&nbsp;import java.util.List;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;/**
+<i>8</i>&nbsp; * Candidatura.
+<i>9</i>&nbsp; */
+<i>10</i>&nbsp;public class Candidatura {
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;    private Double valorPretendido;
+<i>13</i>&nbsp;    private Freelancer freelancer;
+<i>14</i>&nbsp;    private Date data;
+<i>15</i>&nbsp;    private int nrDias;
+<i>16</i>&nbsp;    private String txtApres;
+<i>17</i>&nbsp;    private String txtMotiv;
+<i>18</i>&nbsp;
+<i>19</i>&nbsp;
+<i>20</i>&nbsp;    /**
+<i>21</i>&nbsp;     * Instancia uma nova Candidatura.
+<i>22</i>&nbsp;     *
+<i>23</i>&nbsp;     * @param free            freelancer
+<i>24</i>&nbsp;     * @param valorPretendido valor pretendido
+<i>25</i>&nbsp;     * @param data            data
+<i>26</i>&nbsp;     * @param nrDias          número de dias
+<i>27</i>&nbsp;     * @param txtApres        texto apresentativo
+<i>28</i>&nbsp;     * @param txtMotiv        texto motivacional
+<i>29</i>&nbsp;     */
+<b class="fc"><i>30</i>&nbsp;    public Candidatura(Freelancer free, Double valorPretendido, Date data, int nrDias, String txtApres, String txtMotiv) {</b>
+<b class="fc"><i>31</i>&nbsp;        if (free == null || valorPretendido == null || data == null || txtApres == null || txtMotiv == null || txtApres.isEmpty() || txtMotiv.isEmpty())</b>
+<b class="nc"><i>32</i>&nbsp;            throw new IllegalArgumentException(&quot;Nenhum dos parâmetros pode ser nulo.&quot;);</b>
+<i>33</i>&nbsp;
+<b class="fc"><i>34</i>&nbsp;        this.freelancer = free;</b>
+<b class="fc"><i>35</i>&nbsp;        this.valorPretendido = valorPretendido;</b>
+<b class="fc"><i>36</i>&nbsp;        this.data = data;</b>
+<b class="fc"><i>37</i>&nbsp;        this.nrDias = nrDias;</b>
+<b class="fc"><i>38</i>&nbsp;        this.txtApres = txtApres;</b>
+<b class="fc"><i>39</i>&nbsp;        this.txtMotiv = txtMotiv;</b>
+<b class="fc"><i>40</i>&nbsp;    }</b>
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;    /**
+<i>43</i>&nbsp;     * Devolve o freelancer.
+<i>44</i>&nbsp;     *
+<i>45</i>&nbsp;     * @return freelancer
+<i>46</i>&nbsp;     */
+<i>47</i>&nbsp;    public Freelancer getFreelancer() {
+<b class="fc"><i>48</i>&nbsp;        return this.freelancer;</b>
+<i>49</i>&nbsp;    }
+<i>50</i>&nbsp;
+<i>51</i>&nbsp;    /**
+<i>52</i>&nbsp;     * Devolve o valor pretendido pela candidatura.
+<i>53</i>&nbsp;     *
+<i>54</i>&nbsp;     * @return valor pretendido
+<i>55</i>&nbsp;     */
+<i>56</i>&nbsp;    public double getValorPretendido() {
+<b class="fc"><i>57</i>&nbsp;        return this.valorPretendido;</b>
+<i>58</i>&nbsp;    }
+<i>59</i>&nbsp;
+<i>60</i>&nbsp;    /**
+<i>61</i>&nbsp;     * Devolve a data da Candidatura.
+<i>62</i>&nbsp;     *
+<i>63</i>&nbsp;     * @return data
+<i>64</i>&nbsp;     */
+<i>65</i>&nbsp;    public Date getData() {
+<b class="fc"><i>66</i>&nbsp;        return this.data;</b>
+<i>67</i>&nbsp;    }
+<i>68</i>&nbsp;
+<i>69</i>&nbsp;    /**
+<i>70</i>&nbsp;     * Devolve a descrição textual da Candidatura do Freelancer.
+<i>71</i>&nbsp;     *
+<i>72</i>&nbsp;     * @return descrição textual
+<i>73</i>&nbsp;     */
+<i>74</i>&nbsp;    @Override
+<i>75</i>&nbsp;    public String toString() {
+<b class="nc"><i>76</i>&nbsp;        return String.format(&quot;Freelancer: %s - Valor Pretendido: %.2f POTs - Data: %s - Número de Dias: %d - Texto Apresentativo: %s - Texto Motivacional: %s&quot;, this.freelancer.getM_oNome(), this.valorPretendido, this.data, this.nrDias, this.txtApres, this.txtMotiv);</b>
+<i>77</i>&nbsp;    }
+<i>78</i>&nbsp;
+<i>79</i>&nbsp;    /**
+<i>80</i>&nbsp;     * Calcular média.
+<i>81</i>&nbsp;     *
+<i>82</i>&nbsp;     * @param c    colaborador
+<i>83</i>&nbsp;     * @param anun anuncio
+<i>84</i>&nbsp;     * @return média
+<i>85</i>&nbsp;     */
+<i>86</i>&nbsp;    public double calcularMedia(Candidatura c, Anuncio anun) {
+<b class="fc"><i>87</i>&nbsp;        double media = 0;</b>
+<b class="fc"><i>88</i>&nbsp;        int qtdGP = 0;</b>
+<b class="fc"><i>89</i>&nbsp;        List&lt;CompetenciaTecnica&gt; ctListDaTarefa = this.getListaAuxiliar(anun);</b>
+<b class="fc"><i>90</i>&nbsp;        for (ReconhecimentoCompetenciaTecnica rct : c.getFreelancer().getM_lstReconhecimentoCT()) {</b>
+<b class="fc"><i>91</i>&nbsp;            if (ctListDaTarefa.contains(rct.getM_oCT())) {</b>
+<b class="fc"><i>92</i>&nbsp;                media = rct.getM_oGP().getM_intValor() + media;</b>
+<b class="fc"><i>93</i>&nbsp;                qtdGP++;</b>
+<i>94</i>&nbsp;            }
+<b class="fc"><i>95</i>&nbsp;        }</b>
+<b class="fc"><i>96</i>&nbsp;        return media / qtdGP;</b>
+<i>97</i>&nbsp;    }
+<i>98</i>&nbsp;
+<i>99</i>&nbsp;    /**
+<i>100</i>&nbsp;     * Calcular desvio padrão.
+<i>101</i>&nbsp;     *
+<i>102</i>&nbsp;     * @param c    colaborador
+<i>103</i>&nbsp;     * @param anun anuncio
+<i>104</i>&nbsp;     * @return desvio padrão
+<i>105</i>&nbsp;     */
+<i>106</i>&nbsp;    public double calcularDesvioPadrao(Candidatura c, Anuncio anun) {
+<b class="fc"><i>107</i>&nbsp;        double media = this.calcularMedia(c, anun);</b>
+<b class="fc"><i>108</i>&nbsp;        double desvio = 0;</b>
+<b class="fc"><i>109</i>&nbsp;        List&lt;CompetenciaTecnica&gt; ctListDaTarefa = this.getListaAuxiliar(anun);</b>
+<b class="fc"><i>110</i>&nbsp;        int tamanho = 0;</b>
+<b class="fc"><i>111</i>&nbsp;        for (ReconhecimentoCompetenciaTecnica rct : c.getFreelancer().getM_lstReconhecimentoCT()) {</b>
+<b class="fc"><i>112</i>&nbsp;            if (ctListDaTarefa.contains(rct.getM_oCT())) {</b>
+<b class="fc"><i>113</i>&nbsp;                double intermedio = rct.getM_oGP().getM_intValor() - media;</b>
+<b class="fc"><i>114</i>&nbsp;                desvio += Math.pow(intermedio, 2);</b>
+<b class="fc"><i>115</i>&nbsp;                tamanho++;</b>
+<i>116</i>&nbsp;            }
+<b class="fc"><i>117</i>&nbsp;        }</b>
+<b class="fc"><i>118</i>&nbsp;        return Math.sqrt(desvio / (tamanho));</b>
+<i>119</i>&nbsp;    }
+<i>120</i>&nbsp;
+<i>121</i>&nbsp;    /**
+<i>122</i>&nbsp;     * Devolve a lista auxiliar.
+<i>123</i>&nbsp;     *
+<i>124</i>&nbsp;     * @param anun anúncio
+<i>125</i>&nbsp;     * @return lista Auxiliar
+<i>126</i>&nbsp;     */
+<i>127</i>&nbsp;    public List&lt;CompetenciaTecnica&gt; getListaAuxiliar(Anuncio anun) {
+<b class="fc"><i>128</i>&nbsp;        List&lt;CompetenciaTecnica&gt; ctListDaTarefa = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i>129</i>&nbsp;        for (CaraterCT ct : anun.getTarefa().getM_oCategoriaTarefa().getM_lstCct()) {</b>
+<b class="fc"><i>130</i>&nbsp;            ctListDaTarefa.add(ct.getCt());</b>
+<b class="fc"><i>131</i>&nbsp;        }</b>
+<b class="fc"><i>132</i>&nbsp;        return ctListDaTarefa;</b>
+<i>133</i>&nbsp;    }
+<i>134</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

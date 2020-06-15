@@ -1,0 +1,201 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: RegistoOrganizacoes</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.model.registo</a> ]
+</div>
+
+<h1>Coverage Summary for Class: RegistoOrganizacoes (pt.ipp.isep.dei.esoft.pot.model.registo)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">RegistoOrganizacoes</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (7/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    87,5%
+  </span>
+  <span class="absValue">
+    (21/ 24)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.model.registo;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.autorizacao.AutorizacaoFacade;
+<i>4</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.interfaces.AlgoritmoGeradorPasswords;
+<i>5</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Colaborador;
+<i>6</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Constantes;
+<i>7</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.EnderecoPostal;
+<i>8</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.Organizacao;
+<i>9</i>&nbsp;
+<i>10</i>&nbsp;import java.util.ArrayList;
+<i>11</i>&nbsp;import java.util.List;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;/**
+<i>14</i>&nbsp; * Registo de Organizações.
+<i>15</i>&nbsp; */
+<i>16</i>&nbsp;public class RegistoOrganizacoes implements AlgoritmoGeradorPasswords {
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    private final AutorizacaoFacade m_oAutorizacao;
+<i>19</i>&nbsp;    private List&lt;Organizacao&gt; m_lstOrganizacoes;
+<i>20</i>&nbsp;
+<i>21</i>&nbsp;
+<i>22</i>&nbsp;    /**
+<i>23</i>&nbsp;     * Instancia um novo Registo de Organizações.
+<i>24</i>&nbsp;     *
+<i>25</i>&nbsp;     * @param m_oAutorizacao autorização
+<i>26</i>&nbsp;     */
+<b class="fc"><i>27</i>&nbsp;    public RegistoOrganizacoes(AutorizacaoFacade m_oAutorizacao) {</b>
+<b class="fc"><i>28</i>&nbsp;        this.m_oAutorizacao = m_oAutorizacao;</b>
+<b class="fc"><i>29</i>&nbsp;        this.m_lstOrganizacoes = new ArrayList&lt;&gt;();</b>
+<b class="fc"><i>30</i>&nbsp;    }</b>
+<i>31</i>&nbsp;
+<i>32</i>&nbsp;    /**
+<i>33</i>&nbsp;     * Constrói uma nova Organização através do construtor da classe Organização.
+<i>34</i>&nbsp;     *
+<i>35</i>&nbsp;     * @param strNome     nome
+<i>36</i>&nbsp;     * @param strNIF      NIF
+<i>37</i>&nbsp;     * @param strWebsite  website
+<i>38</i>&nbsp;     * @param strTelefone telefone
+<i>39</i>&nbsp;     * @param strEmail    email
+<i>40</i>&nbsp;     * @param oMorada     morada
+<i>41</i>&nbsp;     * @param oGestor     gestor
+<i>42</i>&nbsp;     * @return organização
+<i>43</i>&nbsp;     */
+<i>44</i>&nbsp;    public Organizacao novaOrganizacao(String strNome, String strNIF, String strWebsite, String strTelefone, String strEmail, EnderecoPostal oMorada, Colaborador oGestor) {
+<b class="fc"><i>45</i>&nbsp;        return new Organizacao(strNome, strNIF, strWebsite, strTelefone, strEmail, oMorada, oGestor);</b>
+<i>46</i>&nbsp;    }
+<i>47</i>&nbsp;
+<i>48</i>&nbsp;    /**
+<i>49</i>&nbsp;     * Regista uma organização recebida por parâmetro.
+<i>50</i>&nbsp;     *
+<i>51</i>&nbsp;     * @param oOrganizacao organização
+<i>52</i>&nbsp;     * @return boolean
+<i>53</i>&nbsp;     */
+<i>54</i>&nbsp;    public boolean registaOrganizacao(Organizacao oOrganizacao) {
+<b class="fc"><i>55</i>&nbsp;        if (this.validaOrganizacao(oOrganizacao)) {</b>
+<b class="fc"><i>56</i>&nbsp;            Colaborador oGestor = oOrganizacao.getGestor();</b>
+<b class="fc"><i>57</i>&nbsp;            String strNomeGestor = oGestor.getNome();</b>
+<b class="fc"><i>58</i>&nbsp;            String strEmailGestor = oGestor.getEmail();</b>
+<b class="fc"><i>59</i>&nbsp;            String strPwd = this.geraPassword(strNomeGestor, strEmailGestor);</b>
+<b class="fc"><i>60</i>&nbsp;            if (this.m_oAutorizacao.registaUtilizadorComPapeis(strNomeGestor, strEmailGestor, strPwd,</b>
+<i>61</i>&nbsp;                    new String[]{Constantes.PAPEL_COLABORADOR_ORGANIZACAO})) //depois adicionar constante gestor em lapr
+<b class="fc"><i>62</i>&nbsp;                return addOrganizacao(oOrganizacao);</b>
+<i>63</i>&nbsp;        }
+<b class="nc"><i>64</i>&nbsp;        return false;</b>
+<i>65</i>&nbsp;    }
+<i>66</i>&nbsp;
+<i>67</i>&nbsp;    /**
+<i>68</i>&nbsp;     * Adiciona à lista de organizações uma organização recebida por parâmetro.
+<i>69</i>&nbsp;     *
+<i>70</i>&nbsp;     * @param oOrganizacao organização
+<i>71</i>&nbsp;     * @return boolean
+<i>72</i>&nbsp;     */
+<i>73</i>&nbsp;    private boolean addOrganizacao(Organizacao oOrganizacao) {
+<b class="fc"><i>74</i>&nbsp;        return this.m_lstOrganizacoes.add(oOrganizacao);</b>
+<i>75</i>&nbsp;    }
+<i>76</i>&nbsp;
+<i>77</i>&nbsp;    /**
+<i>78</i>&nbsp;     * Valida uma organização recebida por parâmetro.
+<i>79</i>&nbsp;     *
+<i>80</i>&nbsp;     * @param oOrganizacao organização
+<i>81</i>&nbsp;     * @return boolean
+<i>82</i>&nbsp;     */
+<i>83</i>&nbsp;    public boolean validaOrganizacao(Organizacao oOrganizacao) {
+<b class="fc"><i>84</i>&nbsp;        boolean bRet = true;</b>
+<i>85</i>&nbsp;
+<b class="fc"><i>86</i>&nbsp;        if (this.m_oAutorizacao.existeUtilizador(oOrganizacao.getGestor().getEmail()))</b>
+<b class="fc"><i>87</i>&nbsp;            bRet = false;</b>
+<i>88</i>&nbsp;
+<b class="fc"><i>89</i>&nbsp;        return bRet;</b>
+<i>90</i>&nbsp;    }
+<i>91</i>&nbsp;
+<i>92</i>&nbsp;    /**
+<i>93</i>&nbsp;     * Gera a password do Freelancer.
+<i>94</i>&nbsp;     *
+<i>95</i>&nbsp;     * @param strNomeGestor  nome do gestor
+<i>96</i>&nbsp;     * @param strEmailGestor email do gestor
+<i>97</i>&nbsp;     * @return password
+<i>98</i>&nbsp;     */
+<i>99</i>&nbsp;    public String geraPassword(String strNomeGestor, String strEmailGestor) {
+<b class="fc"><i>100</i>&nbsp;        return strNomeGestor + &quot;123&quot;;</b>
+<i>101</i>&nbsp;    }
+<i>102</i>&nbsp;
+<i>103</i>&nbsp;    /**
+<i>104</i>&nbsp;     * Devolve uma organização através do email.
+<i>105</i>&nbsp;     *
+<i>106</i>&nbsp;     * @param email email
+<i>107</i>&nbsp;     * @return organização
+<i>108</i>&nbsp;     */
+<i>109</i>&nbsp;    public Organizacao getOrganizacaoByEmailUtilizador(String email) {
+<i>110</i>&nbsp;
+<b class="fc"><i>111</i>&nbsp;        for (Organizacao org : this.m_lstOrganizacoes) {</b>
+<b class="fc"><i>112</i>&nbsp;            if (org.getListaColaboradores().getColaboradores().contains(org.getListaColaboradores().getColaboradorByEmail(email))) {</b>
+<b class="fc"><i>113</i>&nbsp;                return org;</b>
+<i>114</i>&nbsp;            }
+<b class="nc"><i>115</i>&nbsp;        }</b>
+<b class="nc"><i>116</i>&nbsp;        return null;</b>
+<i>117</i>&nbsp;    }
+<i>118</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,292 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Anuncio</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.pot.model</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Anuncio (pt.ipp.isep.dei.esoft.pot.model)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Anuncio</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    66,7%
+  </span>
+  <span class="absValue">
+    (10/ 15)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    76,7%
+  </span>
+  <span class="absValue">
+    (33/ 43)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.pot.model;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.lista.ListaCandidaturas;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import java.util.Date;
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;/**
+<i>8</i>&nbsp; * Anúncio.
+<i>9</i>&nbsp; */
+<i>10</i>&nbsp;public class Anuncio {
+<i>11</i>&nbsp;
+<i>12</i>&nbsp;    private Colaborador c;
+<i>13</i>&nbsp;    private Tarefa tarefa;
+<i>14</i>&nbsp;    private Date dtIniP;
+<i>15</i>&nbsp;    private Date dtFimP;
+<i>16</i>&nbsp;    private Date dtIniC;
+<i>17</i>&nbsp;    private Date dtFimC;
+<i>18</i>&nbsp;    private Date dtIniS;
+<i>19</i>&nbsp;    private Date dtFimS;
+<i>20</i>&nbsp;    private Regimento regT;
+<i>21</i>&nbsp;    private String srtId;
+<i>22</i>&nbsp;    private ListaCandidaturas m_oListaCandidaturas;
+<i>23</i>&nbsp;    private ProcessoSeriacao ps;
+<i>24</i>&nbsp;
+<i>25</i>&nbsp;    /**
+<i>26</i>&nbsp;     * Instancia um novo Anuncio.
+<i>27</i>&nbsp;     *
+<i>28</i>&nbsp;     * @param c      colaborador
+<i>29</i>&nbsp;     * @param tarefa tarefa
+<i>30</i>&nbsp;     * @param dtIniP data inicial publicação
+<i>31</i>&nbsp;     * @param dtFimP data final publicação
+<i>32</i>&nbsp;     * @param dtIniC data inicial candidaturas
+<i>33</i>&nbsp;     * @param dtFimC data final candidaturas
+<i>34</i>&nbsp;     * @param dtIniS data inicial seriação
+<i>35</i>&nbsp;     * @param dtFimS data final seriação
+<i>36</i>&nbsp;     * @param regT   tipo regimento
+<i>37</i>&nbsp;     */
+<b class="fc"><i>38</i>&nbsp;    public Anuncio(Colaborador c, Tarefa tarefa, Date dtIniP, Date dtFimP, Date dtIniC, Date dtFimC, Date dtIniS, Date dtFimS, Regimento regT) {</b>
+<b class="fc"><i>39</i>&nbsp;        if ((c == null) || (tarefa == null) || (dtIniP == null) || (dtFimP == null) || (dtIniC == null) || (dtFimC == null) || (dtIniS == null) || (dtFimS == null) || (regT == null))</b>
+<b class="nc"><i>40</i>&nbsp;            throw new IllegalArgumentException(&quot;Nenhum dos argumentos pode ser nulo ou vazio.&quot;);</b>
+<i>41</i>&nbsp;
+<b class="fc"><i>42</i>&nbsp;        this.c = c;</b>
+<b class="fc"><i>43</i>&nbsp;        this.tarefa = tarefa;</b>
+<b class="fc"><i>44</i>&nbsp;        this.dtIniP = dtIniP;</b>
+<b class="fc"><i>45</i>&nbsp;        this.dtFimP = dtFimP;</b>
+<b class="fc"><i>46</i>&nbsp;        this.dtIniC = dtIniC;</b>
+<b class="fc"><i>47</i>&nbsp;        this.dtFimC = dtFimC;</b>
+<b class="fc"><i>48</i>&nbsp;        this.dtIniS = dtIniS;</b>
+<b class="fc"><i>49</i>&nbsp;        this.dtFimS = dtFimS;</b>
+<b class="fc"><i>50</i>&nbsp;        this.regT = regT;</b>
+<i>51</i>&nbsp;
+<b class="fc"><i>52</i>&nbsp;        this.m_oListaCandidaturas = new ListaCandidaturas();</b>
+<b class="fc"><i>53</i>&nbsp;    }</b>
+<i>54</i>&nbsp;
+<i>55</i>&nbsp;    /**
+<i>56</i>&nbsp;     * Devolve o colaborador.
+<i>57</i>&nbsp;     *
+<i>58</i>&nbsp;     * @return colaborador
+<i>59</i>&nbsp;     */
+<i>60</i>&nbsp;    public Colaborador getC() {
+<b class="nc"><i>61</i>&nbsp;        return this.c;</b>
+<i>62</i>&nbsp;    }
+<i>63</i>&nbsp;
+<i>64</i>&nbsp;    /**
+<i>65</i>&nbsp;     * Modifica o id.
+<i>66</i>&nbsp;     *
+<i>67</i>&nbsp;     * @param id id
+<i>68</i>&nbsp;     */
+<i>69</i>&nbsp;    public void setStrId(String id) {
+<b class="fc"><i>70</i>&nbsp;        this.srtId = id;</b>
+<b class="fc"><i>71</i>&nbsp;    }</b>
+<i>72</i>&nbsp;
+<i>73</i>&nbsp;    /**
+<i>74</i>&nbsp;     * Devolve o ID.
+<i>75</i>&nbsp;     *
+<i>76</i>&nbsp;     * @return id
+<i>77</i>&nbsp;     */
+<i>78</i>&nbsp;    public String getSrtId() {
+<b class="fc"><i>79</i>&nbsp;        return this.srtId;</b>
+<i>80</i>&nbsp;    }
+<i>81</i>&nbsp;
+<i>82</i>&nbsp;    /**
+<i>83</i>&nbsp;     * Devolve um tipo de regimento.
+<i>84</i>&nbsp;     *
+<i>85</i>&nbsp;     * @return tipo regimento
+<i>86</i>&nbsp;     */
+<i>87</i>&nbsp;    public Regimento getRegT() {
+<b class="fc"><i>88</i>&nbsp;        return this.regT;</b>
+<i>89</i>&nbsp;    }
+<i>90</i>&nbsp;
+<i>91</i>&nbsp;    /**
+<i>92</i>&nbsp;     * Devolve a tarefa.
+<i>93</i>&nbsp;     *
+<i>94</i>&nbsp;     * @return tarefa
+<i>95</i>&nbsp;     */
+<i>96</i>&nbsp;    public Tarefa getTarefa() {
+<b class="fc"><i>97</i>&nbsp;        return this.tarefa;</b>
+<i>98</i>&nbsp;    }
+<i>99</i>&nbsp;
+<i>100</i>&nbsp;    /**
+<i>101</i>&nbsp;     * Devolve a lista de candidaturas.
+<i>102</i>&nbsp;     *
+<i>103</i>&nbsp;     * @return lista candidaturas
+<i>104</i>&nbsp;     */
+<i>105</i>&nbsp;    public ListaCandidaturas getM_oListaCandidaturas() {
+<b class="fc"><i>106</i>&nbsp;        return this.m_oListaCandidaturas;</b>
+<i>107</i>&nbsp;    }
+<i>108</i>&nbsp;
+<i>109</i>&nbsp;    /**
+<i>110</i>&nbsp;     * Cria um novo processo de seriação através do construtor da classe ProcessoSeriacao.
+<i>111</i>&nbsp;     *
+<i>112</i>&nbsp;     * @param colab colaborador
+<i>113</i>&nbsp;     * @return processo seriação
+<i>114</i>&nbsp;     */
+<i>115</i>&nbsp;    public ProcessoSeriacao novoProcessoSeriacao(Colaborador colab) {
+<b class="nc"><i>116</i>&nbsp;        return new ProcessoSeriacao(this.getRegT(), colab);</b>
+<i>117</i>&nbsp;    }
+<i>118</i>&nbsp;
+<i>119</i>&nbsp;    /**
+<i>120</i>&nbsp;     * Aceita as candidaturas.
+<i>121</i>&nbsp;     *
+<i>122</i>&nbsp;     * @return boolean
+<i>123</i>&nbsp;     */
+<i>124</i>&nbsp;    public boolean aceitaCandidaturas() {
+<b class="fc"><i>125</i>&nbsp;        Date dataAtual = new Date();</b>
+<b class="fc"><i>126</i>&nbsp;        return dataAtual.before(this.dtFimC);</b>
+<i>127</i>&nbsp;    }
+<i>128</i>&nbsp;
+<i>129</i>&nbsp;    /**
+<i>130</i>&nbsp;     * Verifica se o freelancer é elegível.
+<i>131</i>&nbsp;     *
+<i>132</i>&nbsp;     * @param free freelancer
+<i>133</i>&nbsp;     * @return boolean
+<i>134</i>&nbsp;     */
+<i>135</i>&nbsp;    public boolean eFreelancerElegivel(Freelancer free) {
+<b class="fc"><i>136</i>&nbsp;        for (CaraterCT ct : this.getTarefa().getM_oCategoriaTarefa().getM_lstCct()) {</b>
+<b class="fc"><i>137</i>&nbsp;            if (!VerificarCaraterCT(free, ct)) {</b>
+<b class="nc"><i>138</i>&nbsp;                return false;</b>
+<i>139</i>&nbsp;            }
+<b class="fc"><i>140</i>&nbsp;        }</b>
+<b class="fc"><i>141</i>&nbsp;        return true;</b>
+<i>142</i>&nbsp;    }
+<i>143</i>&nbsp;
+<i>144</i>&nbsp;    /**
+<i>145</i>&nbsp;     * Verifica o Caráter da Competência Técnica.
+<i>146</i>&nbsp;     *
+<i>147</i>&nbsp;     * @param free freelancer
+<i>148</i>&nbsp;     * @param ct   competência técnica
+<i>149</i>&nbsp;     * @return boolean
+<i>150</i>&nbsp;     */
+<i>151</i>&nbsp;    private boolean VerificarCaraterCT(Freelancer free, CaraterCT ct) {
+<b class="fc"><i>152</i>&nbsp;        for (ReconhecimentoCompetenciaTecnica rct : free.getM_lstReconhecimentoCT()) {</b>
+<b class="fc"><i>153</i>&nbsp;            if (rct.getM_oCT().equals(ct.getCt())) {</b>
+<b class="fc"><i>154</i>&nbsp;                return (rct.getM_oGP().getM_intValor() &gt;= ct.getGp().getM_intValor());</b>
+<i>155</i>&nbsp;            }
+<b class="fc"><i>156</i>&nbsp;        }</b>
+<b class="fc"><i>157</i>&nbsp;        return true;</b>
+<i>158</i>&nbsp;    }
+<i>159</i>&nbsp;
+<i>160</i>&nbsp;    /**
+<i>161</i>&nbsp;     * Cria uma nova candidatura.
+<i>162</i>&nbsp;     *
+<i>163</i>&nbsp;     * @param free     freelancer
+<i>164</i>&nbsp;     * @param dataCand data candidatura
+<i>165</i>&nbsp;     * @param valorPrt valor pretendido
+<i>166</i>&nbsp;     * @param nDias    número de dias
+<i>167</i>&nbsp;     * @param txtApres texto apresentativo
+<i>168</i>&nbsp;     * @param txtMotiv texto motivacional
+<i>169</i>&nbsp;     * @return candidatura
+<i>170</i>&nbsp;     */
+<i>171</i>&nbsp;    public Candidatura novaCandidatura(Freelancer free, Date dataCand, double valorPrt, int nDias, String txtApres, String txtMotiv) {
+<b class="fc"><i>172</i>&nbsp;        if (aceitaCandidaturas()) {</b>
+<b class="fc"><i>173</i>&nbsp;            if (eFreelancerElegivel(free)) {</b>
+<b class="fc"><i>174</i>&nbsp;                return this.m_oListaCandidaturas.novaCandidatura(free, dataCand, valorPrt, nDias, txtApres, txtMotiv);</b>
+<i>175</i>&nbsp;            }
+<i>176</i>&nbsp;        }
+<b class="nc"><i>177</i>&nbsp;        return null;</b>
+<i>178</i>&nbsp;    }
+<i>179</i>&nbsp;
+<i>180</i>&nbsp;    /**
+<i>181</i>&nbsp;     * Devolve a descrição textual da tarefa.
+<i>182</i>&nbsp;     *
+<i>183</i>&nbsp;     * @return String
+<i>184</i>&nbsp;     */
+<i>185</i>&nbsp;    @Override
+<i>186</i>&nbsp;    public String toString() {
+<b class="nc"><i>187</i>&nbsp;        return String.format(&quot;Tarefa: Designação: %s , Custo: %s POTs , Duração da Execução: %s dias - Anúncio: Tipo de Regimento: %s , Data inicial de publicitação: %s , Data final de publicitação: %s , Data inicial de apresentação de candidaturas: %s , Data final de apresentação de candidaturas: %s , Data inicial de seriação: %s , Data final de seriação: %s - Colaborador: %s&quot;, this.tarefa.getM_strDesignacao(), this.tarefa.getM_strCustoTarefa(), this.tarefa.getM_strDuracaoExecucao(), this.regT.getM_strDesignacao(), this.dtIniP, this.dtFimP, this.dtIniC, this.dtFimC, this.dtIniS, this.dtFimS, this.c.getNome());</b>
+<i>188</i>&nbsp;    }
+<i>189</i>&nbsp;
+<i>190</i>&nbsp;    /**
+<i>191</i>&nbsp;     * Regista o processo de seriação.
+<i>192</i>&nbsp;     *
+<i>193</i>&nbsp;     * @param ps Processo de Seriação
+<i>194</i>&nbsp;     * @return boolean
+<i>195</i>&nbsp;     */
+<i>196</i>&nbsp;    public boolean registaProcessoSeriacao(ProcessoSeriacao ps) {
+<b class="nc"><i>197</i>&nbsp;        setProcessoSeriacao(ps);</b>
+<b class="nc"><i>198</i>&nbsp;        return true;</b>
+<i>199</i>&nbsp;    }
+<i>200</i>&nbsp;
+<i>201</i>&nbsp;    /**
+<i>202</i>&nbsp;     * Modifica o Processo de Seriação.
+<i>203</i>&nbsp;     *
+<i>204</i>&nbsp;     * @param ps processo de seriação
+<i>205</i>&nbsp;     */
+<i>206</i>&nbsp;    private void setProcessoSeriacao(ProcessoSeriacao ps) {
+<b class="nc"><i>207</i>&nbsp;        this.ps = ps;</b>
+<b class="nc"><i>208</i>&nbsp;    }</b>
+<i>209</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

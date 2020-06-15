@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5dd3ca62-9483-4b16-ba54-01860aa282d7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Jordão\Desktop\1DL_TP3_1190633_1190404\CodeCovarageReport" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1bWxXgsQ4a6ElMH41TVEcMKuRbw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pt.ipp.isep.dei.esoft.pot.controller.scene" />
+      <recent name="pt.ipp.isep.dei.esoft.pot.model" />
+      <recent name="pt.ipp.isep.dei.esoft.pot.model.registo" />
+      <recent name="pt.ipp.isep.dei.esoft.pot.controller" />
+      <recent name="pt.ipp.isep.dei.esoft.pot.ui.console" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.MainApp">
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.ipp.isep.dei.esoft.pot.ui.MainApp" />
+      <module name="ProjetoFinal" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipp.isep.dei.esoft.pot.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="pt.ipp.isep.dei.esoft.pot.ui.MainApp" />
+      <module name="1dl_tp3_1190633_1190404" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipp.isep.dei.esoft.pot.ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in 1DL_TP3_1190633_1190404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1DL_TP3_1190633_1190404" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CandidaturaIT.testCalcularDesvioPadrao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1DL_TP3_1190633_1190404" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipp.isep.dei.esoft.pot.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pt.ipp.isep.dei.esoft.pot.model" />
+      <option name="MAIN_CLASS_NAME" value="pt.ipp.isep.dei.esoft.pot.model.CandidaturaIT" />
+      <option name="METHOD_NAME" value="testCalcularDesvioPadrao" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Seriacao1IT.testSeriar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1DL_TP3_1190633_1190404" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipp.isep.dei.esoft.pot.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pt.ipp.isep.dei.esoft.pot.model" />
+      <option name="MAIN_CLASS_NAME" value="pt.ipp.isep.dei.esoft.pot.model.Seriacao1IT" />
+      <option name="METHOD_NAME" value="testSeriar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pt.ipp.isep.dei.esoft.pot.model in 1DL_TP3_1190633_1190404" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="1DL_TP3_1190633_1190404" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pt.ipp.isep.dei.esoft.pot.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pt.ipp.isep.dei.esoft.pot.model" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="JUnit.CandidaturaIT.testCalcularDesvioPadrao" />
+        <item itemvalue="JUnit.Seriacao1IT.testSeriar" />
+        <item itemvalue="JUnit.pt.ipp.isep.dei.esoft.pot.model in 1DL_TP3_1190633_1190404" />
+        <item itemvalue="JUnit.All in 1DL_TP3_1190633_1190404" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5dd3ca62-9483-4b16-ba54-01860aa282d7" name="Default Changelist" comment="" />
+      <created>1588761691664</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588761691664</updated>
+      <workItem from="1588761699659" duration="566000" />
+      <workItem from="1588762354046" duration="39352000" />
+      <workItem from="1588838585572" duration="5716000" />
+      <workItem from="1588863074924" duration="550000" />
+      <workItem from="1588876309155" duration="2419000" />
+      <workItem from="1588950335357" duration="10117000" />
+      <workItem from="1588961627692" duration="11551000" />
+      <workItem from="1589039810121" duration="21127000" />
+      <workItem from="1589117358743" duration="1606000" />
+      <workItem from="1589119140781" duration="242000" />
+      <workItem from="1589120262554" duration="19920000" />
+      <workItem from="1589194719755" duration="23216000" />
+      <workItem from="1589316497293" duration="4579000" />
+      <workItem from="1589322776974" duration="2261000" />
+      <workItem from="1589364188784" duration="9292000" />
+      <workItem from="1589474866525" duration="657000" />
+      <workItem from="1589475941091" duration="3020000" />
+      <workItem from="1589489099410" duration="10411000" />
+      <workItem from="1589536793588" duration="6538000" />
+      <workItem from="1589573011269" duration="2502000" />
+      <workItem from="1589578040804" duration="16828000" />
+      <workItem from="1589597540593" duration="154000" />
+      <workItem from="1589638705995" duration="14397000" />
+      <workItem from="1589656822844" duration="727000" />
+      <workItem from="1589679102390" duration="2624000" />
+      <workItem from="1589725233817" duration="32955000" />
+      <workItem from="1589807005775" duration="18354000" />
+      <workItem from="1589836839506" duration="13126000" />
+      <workItem from="1589882213166" duration="7101000" />
+      <workItem from="1589906557223" duration="6981000" />
+      <workItem from="1589920485763" duration="6149000" />
+      <workItem from="1589968722848" duration="29655000" />
+      <workItem from="1590051453263" duration="1138000" />
+      <workItem from="1590086625582" duration="650000" />
+      <workItem from="1590087361500" duration="107000" />
+      <workItem from="1590087588462" duration="20390000" />
+      <workItem from="1590147369009" duration="9597000" />
+      <workItem from="1590187376588" duration="976000" />
+      <workItem from="1590188479491" duration="88000" />
+      <workItem from="1590188679503" duration="182000" />
+      <workItem from="1590252581375" duration="16244000" />
+      <workItem from="1590321127318" duration="4008000" />
+      <workItem from="1590342764049" duration="4031000" />
+      <workItem from="1590348428020" duration="1078000" />
+      <workItem from="1590497075721" duration="2684000" />
+      <workItem from="1590519226062" duration="552000" />
+      <workItem from="1590535581734" duration="133000" />
+      <workItem from="1590702619120" duration="352000" />
+      <workItem from="1591201357325" duration="3764000" />
+      <workItem from="1592185642785" duration="1267000" />
+    </task>
+    <task id="LOCAL-00144" summary="Java Doc">
+      <created>1589923858544</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1589923858544</updated>
+    </task>
+    <task id="LOCAL-00145" summary="Java Doc + Update Desvio Padrão">
+      <created>1589924695602</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1589924695602</updated>
+    </task>
+    <task id="LOCAL-00146" summary="Java Doc Updates">
+      <created>1589927229240</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1589927229240</updated>
+    </task>
+    <task id="LOCAL-00147" summary="Java Doc Updates">
+      <created>1589927369574</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1589927369576</updated>
+    </task>
+    <task id="LOCAL-00148" summary="Controller da UI">
+      <created>1589972006453</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1589972006458</updated>
+    </task>
+    <task id="LOCAL-00149" summary="Autenticação UI Updates">
+      <created>1589972267351</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1589972267352</updated>
+    </task>
+    <task id="LOCAL-00150" summary="Updates Ficheiros">
+      <created>1589972390388</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1589972390388</updated>
+    </task>
+    <task id="LOCAL-00151" summary="Updates toString()">
+      <created>1589973026701</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1589973026701</updated>
+    </task>
+    <task id="LOCAL-00152" summary="Updates toString()">
+      <created>1589973473589</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1589973473590</updated>
+    </task>
+    <task id="LOCAL-00153" summary="Updates toString()">
+      <created>1589973498542</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1589973498542</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Updates FXML">
+      <created>1589973848116</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1589973848116</updated>
+    </task>
+    <task id="LOCAL-00155" summary="Updates FXML">
+      <created>1589974059552</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1589974059552</updated>
+    </task>
+    <task id="LOCAL-00156" summary="Updates FXML">
+      <created>1589974583037</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1589974583038</updated>
+    </task>
+    <task id="LOCAL-00157" summary="Updates Ficheiros">
+      <created>1589974954263</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1589974954263</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Otimização">
+      <created>1589975637023</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1589975637024</updated>
+    </task>
+    <task id="LOCAL-00159" summary="Atualização Ficheiros">
+      <created>1589976486364</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1589976486364</updated>
+    </task>
+    <task id="LOCAL-00160" summary="Dados do Login">
+      <created>1589977027596</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1589977027596</updated>
+    </task>
+    <task id="LOCAL-00161" summary="Dados do Login">
+      <created>1589977102652</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1589977102652</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Update processo de Seriacao Consola">
+      <created>1589986417004</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1589986417004</updated>
+    </task>
+    <task id="LOCAL-00163" summary="Java Doc Updates">
+      <created>1589989266400</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1589989266400</updated>
+    </task>
+    <task id="LOCAL-00164" summary="FXML Updates">
+      <created>1589995767234</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1589995767235</updated>
+    </task>
+    <task id="LOCAL-00165" summary="Updates toString()">
+      <created>1589999252331</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1589999252331</updated>
+    </task>
+    <task id="LOCAL-00166" summary="Update Calcular Desvio Padrão">
+      <created>1590010647603</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1590010647603</updated>
+    </task>
+    <task id="LOCAL-00167" summary="Remove Métodos não utilizados">
+      <created>1590023943932</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1590023943932</updated>
+    </task>
+    <task id="LOCAL-00168" summary="Updates Código Geral">
+      <created>1590025612770</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1590025612777</updated>
+    </task>
+    <task id="LOCAL-00169" summary="Testes Unitários Desvio-Padrão e Calculo de Média">
+      <created>1590092334871</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1590092334876</updated>
+    </task>
+    <task id="LOCAL-00170" summary="Testes Unitários Seriação 1">
+      <created>1590100254733</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1590100254733</updated>
+    </task>
+    <task id="LOCAL-00171" summary="Testes Unitários Seriação 2 + Informação nos ficheiros">
+      <created>1590105676887</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1590105676887</updated>
+    </task>
+    <task id="LOCAL-00172" summary="Testes Unitários Seriação 1 + Informação nos ficheiros">
+      <created>1590108978023</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1590108978023</updated>
+    </task>
+    <task id="LOCAL-00173" summary="Testes Unitários Seriação 1 + Informação nos ficheiros">
+      <created>1590109336125</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1590109336125</updated>
+    </task>
+    <task id="LOCAL-00174" summary="Adicionado Start Leitura Ficheiros para menos código repetido">
+      <created>1590109809720</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1590109809720</updated>
+    </task>
+    <task id="LOCAL-00175" summary="Updates Java Doc">
+      <created>1590110542273</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1590110542273</updated>
+    </task>
+    <task id="LOCAL-00176" summary="Aplicação do try catch na Leitura de Ficheiros">
+      <created>1590112035752</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1590112035752</updated>
+    </task>
+    <task id="LOCAL-00177" summary="Aplicação do try catch na Leitura de Ficheiros">
+      <created>1590112206778</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1590112206778</updated>
+    </task>
+    <task id="LOCAL-00178" summary="Limpeza do List View">
+      <created>1590149924883</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1590149924884</updated>
+    </task>
+    <task id="LOCAL-00179" summary="Testes Unitários Updates">
+      <created>1590161959067</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1590161959070</updated>
+    </task>
+    <task id="LOCAL-00180" summary="Alguns Updates">
+      <created>1590173726172</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1590173726172</updated>
+    </task>
+    <task id="LOCAL-00181" summary="Updates Interface Gráfica">
+      <created>1590175310929</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1590175310929</updated>
+    </task>
+    <task id="LOCAL-00182" summary="Updates em todos os aspetos">
+      <created>1590271413509</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1590271413509</updated>
+    </task>
+    <task id="LOCAL-00183" summary="Updates em todos os aspetos">
+      <created>1590273148387</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1590273148387</updated>
+    </task>
+    <task id="LOCAL-00184" summary="Java Doc Ficheiro /Doc">
+      <created>1590274279893</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1590274279893</updated>
+    </task>
+    <task id="LOCAL-00185" summary="Updates testes unitários">
+      <created>1590279533653</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1590279533653</updated>
+    </task>
+    <task id="LOCAL-00186" summary="Code Coverage Updates">
+      <created>1590282011468</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1590282011468</updated>
+    </task>
+    <task id="LOCAL-00187" summary="Code Coverage Updates">
+      <created>1590282213448</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1590282213448</updated>
+    </task>
+    <task id="LOCAL-00188" summary="Code Coverage Updates">
+      <created>1590282819510</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1590282819510</updated>
+    </task>
+    <task id="LOCAL-00189" summary="Alguns ficheiros (.idea e target)">
+      <created>1590283093481</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1590283093481</updated>
+    </task>
+    <task id="LOCAL-00190" summary="Diagrama de Classes">
+      <created>1590284087070</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1590284087070</updated>
+    </task>
+    <task id="LOCAL-00191" summary="Updates">
+      <created>1590342446726</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342446726</updated>
+    </task>
+    <task id="LOCAL-00192" summary="Updates">
+      <created>1590348498568</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1590348498583</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Java Doc Updates" />
+    <MESSAGE value="FXML Updates" />
+    <MESSAGE value="Updates toString()" />
+    <MESSAGE value="Update Calcular Desvio Padrão" />
+    <MESSAGE value="Remove Métodos não utilizados" />
+    <MESSAGE value="Updates Código Geral" />
+    <MESSAGE value="Testes Unitários Desvio-Padrão e Calculo de Média" />
+    <MESSAGE value="Testes Unitários Seriação 1" />
+    <MESSAGE value="Testes Unitários Seriação 2 + Informação nos ficheiros" />
+    <MESSAGE value="Testes Unitários Seriação 1 + Informação nos ficheiros" />
+    <MESSAGE value="Adionado Start Leitura Ficheiros para menos código repetido" />
+    <MESSAGE value="Adicionado Start Leitura Ficheiros para menos código repetido" />
+    <MESSAGE value="Updates Java Doc" />
+    <MESSAGE value="Aplicação do try catch na Leitura de Ficheiros" />
+    <MESSAGE value="Limpeza do List View" />
+    <MESSAGE value="Testes Unitários Updates" />
+    <MESSAGE value="Alguns Updates" />
+    <MESSAGE value="Updates Interface Gráfica" />
+    <MESSAGE value="Updates em todos os aspetos" />
+    <MESSAGE value="Java Doc Ficheiro /Doc" />
+    <MESSAGE value="Updates testes unitários" />
+    <MESSAGE value="Code Coverage Updates" />
+    <MESSAGE value="Alguns ficheiros (.idea e target)" />
+    <MESSAGE value="Diagrama de Classes" />
+    <MESSAGE value="Updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-924" y="0" width="619" height="680" key="#Main" timestamp="1588951380438">
+      <screen x="-1280" y="0" width="1280" height="680" />
+    </state>
+    <state x="-924" y="0" width="619" height="680" key="#Main/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1588951380438" />
+    <state x="380" y="0" width="619" height="728" key="#Main/0.0.1366.728@0.0.1366.728" timestamp="1588840673604" />
+    <state x="380" y="0" width="619" height="728" key="#MainApp" timestamp="1592186460635">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="380" y="0" width="619" height="728" key="#MainApp/0.0.1366.728@0.0.1366.728" timestamp="1592186460635" />
+    <state x="-1152" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588951566526">
+      <screen x="-1280" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1152" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1588951566526" />
+    <state x="137" y="19" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1588785628407" />
+    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1590272622240">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.728@0.0.1366.728" timestamp="1590272622240" />
+    <state x="435" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589976979153">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="435" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1589976979153" />
+    <state x="475" y="34" width="390" height="648" key="#com.intellij.ide.util.MemberChooser" timestamp="1589987442347">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-835" y="32" width="390" height="648" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589062437346" />
+    <state x="475" y="34" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589987442347" />
+    <state x="412" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592186445762">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-894" y="144" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1588951377087" />
+    <state x="412" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1592186445762" />
+    <state x="502" y="55" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1590188289354">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="502" y="55" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1366.728@0.0.1366.728" timestamp="1590188289354" />
+    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588862045431">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="363" y="100" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.728@0.0.1366.728" timestamp="1588862045431" />
+    <state x="100" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1589117929339">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="100" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1589117929339" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1589971117604">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589971117604" />
+    <state x="430" y="93" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1590280917495">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="430" y="93" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1590280917495" />
+    <state x="240" y="0" key="CommitChangelistDialog2" timestamp="1590348480054">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1055" y="0" key="CommitChangelistDialog2/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589064006980" />
+    <state x="240" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1590348480054" />
+    <state x="427" y="0" key="Diagram.Print.Preview.Dialog" timestamp="1589997529197">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="427" y="0" key="Diagram.Print.Preview.Dialog/0.0.1366.728@0.0.1366.728" timestamp="1589997529197" />
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1590535752820">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="1800" y="-202" key="FileChooserDialogImpl/0.0.1366.728/1366.-313.1280.680@1366.-313.1280.680" timestamp="1588878619415" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590535752820" />
+    <state width="1323" height="131" key="GridCell.Tab.0.bottom" timestamp="1592186880817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1237" height="237" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589063985404" />
+    <state width="1323" height="286" key="GridCell.Tab.0.bottom/0.0.1366.728/-1280.0.1280.680@0.0.1366.728" timestamp="1588976072321" />
+    <state width="1323" height="131" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592186880817" />
+    <state width="1323" height="131" key="GridCell.Tab.0.center" timestamp="1592186880817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1237" height="237" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589063985402" />
+    <state width="1323" height="286" key="GridCell.Tab.0.center/0.0.1366.728/-1280.0.1280.680@0.0.1366.728" timestamp="1588976072321" />
+    <state width="1323" height="131" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592186880817" />
+    <state width="1323" height="131" key="GridCell.Tab.0.left" timestamp="1592186880817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1237" height="237" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589063985402" />
+    <state width="1323" height="286" key="GridCell.Tab.0.left/0.0.1366.728/-1280.0.1280.680@0.0.1366.728" timestamp="1588976072321" />
+    <state width="1323" height="131" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592186880817" />
+    <state width="1323" height="131" key="GridCell.Tab.0.right" timestamp="1592186880817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1237" height="237" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589063985403" />
+    <state width="1323" height="286" key="GridCell.Tab.0.right/0.0.1366.728/-1280.0.1280.680@0.0.1366.728" timestamp="1588976072321" />
+    <state width="1323" height="131" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592186880817" />
+    <state width="1323" height="131" key="GridCell.Tab.1.bottom" timestamp="1592186880818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592186880818" />
+    <state width="1323" height="131" key="GridCell.Tab.1.center" timestamp="1592186880817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1592186880817" />
+    <state width="1323" height="131" key="GridCell.Tab.1.left" timestamp="1592186880817">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1592186880817" />
+    <state width="1323" height="131" key="GridCell.Tab.1.right" timestamp="1592186880818">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="131" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592186880818" />
+    <state x="263" y="99" key="IDE.errors.dialog" timestamp="1590188262755">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="263" y="99" key="IDE.errors.dialog/0.0.1366.728@0.0.1366.728" timestamp="1590188262755" />
+    <state x="391" y="66" key="RollbackChangesDialog" timestamp="1589995100859">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="66" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1589995100859" />
+    <state x="128" y="0" key="SettingsEditor" timestamp="1590342567209">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1160" y="0" key="SettingsEditor/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1588951268868" />
+    <state x="128" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590342567209" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1590348603776">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-1022" y="91" key="Vcs.Push.Dialog.v2/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589064018868" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1590348603776" />
+    <state width="691" height="372" key="XDebugger.FullValuePopup" timestamp="1589753967689">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="691" height="372" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1589753967689" />
+    <state x="352" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589574157969">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="352" y="256" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1366.728@0.0.1366.728" timestamp="1589574157969" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590347842312">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-819" y="260" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589040568275" />
+    <state x="492" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1590347842312" />
+    <state x="65" y="25" key="new project wizard" timestamp="1590535758650">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="25" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1590535758650" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1590284614391">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="-928" y="23" width="672" height="633" key="run.anything.popup/0.0.1366.728/-1280.0.1280.680@-1280.0.1280.680" timestamp="1589063711248" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1590284614391" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/pt/ipp/isep/dei/esoft/leitura/LeituraCandidaturas.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/1DL_TP3_1190633_1190404$All_in_1dl_tp3_1190633_1190404.ic" NAME="All in 1dl_tp3_1190633_1190404 Coverage Results" MODIFIED="1590281363579" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/1DL_TP3_1190633_1190404$pt_ipp_isep_dei_esoft_pot_model_in_1dl_tp3_1190633_1190404.ic" NAME="pt.ipp.isep.dei.esoft.pot.model in 1dl_tp3_1190633_1190404 Coverage Results" MODIFIED="1590261103871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>pt.ipp.isep.dei.esoft.pot.model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/1DL_TP3_1190633_1190404$Seriacao1IT.ic" NAME="Seriacao1IT Coverage Results" MODIFIED="1590272623287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>pt.ipp.isep.dei.esoft.pot.model.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/1DL_TP3_1190633_1190404$All_in_1dl_tp3_1190633_1190404__1_.ic" NAME="All in 1dl_tp3_1190633_1190404 (1) Coverage Results" MODIFIED="1590280997915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/1DL_TP3_1190633_1190404$All_in_1dl_tp3_1190633_1190404__2_.ic" NAME="All in 1dl_tp3_1190633_1190404 (2) Coverage Results" MODIFIED="1590261007887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

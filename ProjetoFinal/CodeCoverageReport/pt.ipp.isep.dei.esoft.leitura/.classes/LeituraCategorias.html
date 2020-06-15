@@ -1,0 +1,162 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: LeituraCategorias</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.leitura</a> ]
+</div>
+
+<h1>Coverage Summary for Class: LeituraCategorias (pt.ipp.isep.dei.esoft.leitura)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">LeituraCategorias</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (2/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    86,8%
+  </span>
+  <span class="absValue">
+    (33/ 38)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.leitura;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.controller.console.AplicacaoPOT;
+<i>4</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.*;
+<i>5</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.registo.RegistoAreasAtividade;
+<i>6</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.registo.RegistoCategorias;
+<i>7</i>&nbsp;import pt.ipp.isep.dei.esoft.pot.model.registo.RegistoCompetenciasTecnicas;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import java.io.File;
+<i>10</i>&nbsp;import java.io.FileNotFoundException;
+<i>11</i>&nbsp;import java.util.Scanner;
+<i>12</i>&nbsp;
+<i>13</i>&nbsp;/**
+<i>14</i>&nbsp; * Leitura de Categorias através de um ficheiro.
+<i>15</i>&nbsp; */
+<i>16</i>&nbsp;public class LeituraCategorias {
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    private Plataforma m_oPlataforma;
+<i>19</i>&nbsp;    private RegistoCategorias m_oRegistoCategoria;
+<i>20</i>&nbsp;    private RegistoAreasAtividade rat;
+<i>21</i>&nbsp;    private RegistoCompetenciasTecnicas rct;
+<i>22</i>&nbsp;    private AreaAtividade m_oAreaAtividade;
+<i>23</i>&nbsp;    private Categoria m_oCategoria;
+<i>24</i>&nbsp;    private CompetenciaTecnica m_oCompetenciaTecnica;
+<i>25</i>&nbsp;    private GrauProficiencia gp;
+<i>26</i>&nbsp;    private CaraterCT cCt;
+<i>27</i>&nbsp;
+<i>28</i>&nbsp;    /**
+<i>29</i>&nbsp;     * Instancia uma nova Leitura de Categorias.
+<i>30</i>&nbsp;     */
+<b class="fc"><i>31</i>&nbsp;    public LeituraCategorias() {</b>
+<b class="fc"><i>32</i>&nbsp;        this.m_oPlataforma = AplicacaoPOT.getInstance().getPlataforma();</b>
+<b class="fc"><i>33</i>&nbsp;        this.m_oRegistoCategoria = this.m_oPlataforma.getRegistoCategorias();</b>
+<b class="fc"><i>34</i>&nbsp;        this.rat = this.m_oPlataforma.getRegistoAreaAtividade();</b>
+<b class="fc"><i>35</i>&nbsp;        this.rct = this.m_oPlataforma.getRegistoCT();</b>
+<b class="fc"><i>36</i>&nbsp;    }</b>
+<i>37</i>&nbsp;
+<i>38</i>&nbsp;    /**
+<i>39</i>&nbsp;     * Lê o ficheiro.
+<i>40</i>&nbsp;     */
+<i>41</i>&nbsp;    public void run() {
+<i>42</i>&nbsp;
+<i>43</i>&nbsp;        try {
+<b class="fc"><i>44</i>&nbsp;            File dadosCategorias = new File(&quot;Ficheiros\\Categorias.txt&quot;);</b>
+<b class="fc"><i>45</i>&nbsp;            Scanner sc = new Scanner(dadosCategorias);</b>
+<b class="fc"><i>46</i>&nbsp;            sc.nextLine();</b>
+<b class="fc"><i>47</i>&nbsp;            sc.nextLine();</b>
+<b class="fc"><i>48</i>&nbsp;            while (sc.hasNextLine()) {</b>
+<b class="fc"><i>49</i>&nbsp;                String linha = sc.nextLine();</b>
+<b class="fc"><i>50</i>&nbsp;                String[] dados = linha.split(&quot;;&quot;);</b>
+<b class="fc"><i>51</i>&nbsp;                String strCodigoAT = dados[0].trim();</b>
+<b class="fc"><i>52</i>&nbsp;                String strDescricao = dados[1].trim();</b>
+<b class="fc"><i>53</i>&nbsp;                this.m_oAreaAtividade = this.rat.getAreaAtividadeByCod(strCodigoAT);</b>
+<b class="fc"><i>54</i>&nbsp;                this.m_oCategoria = this.m_oRegistoCategoria.novaCategoria(strDescricao, this.m_oAreaAtividade);</b>
+<b class="fc"><i>55</i>&nbsp;                if (this.m_oRegistoCategoria.validaCategoria(this.m_oCategoria)) {</b>
+<b class="fc"><i>56</i>&nbsp;                    for (int i = 2; i &lt; dados.length; i++) {</b>
+<b class="fc"><i>57</i>&nbsp;                        String strCTCod = dados[i].trim();</b>
+<b class="fc"><i>58</i>&nbsp;                        i++;</b>
+<b class="fc"><i>59</i>&nbsp;                        int srtGPValor = Integer.parseInt(dados[i].trim());</b>
+<b class="fc"><i>60</i>&nbsp;                        i++;</b>
+<b class="fc"><i>61</i>&nbsp;                        boolean GPObg = dados[i].trim().equals(&quot;true&quot;);</b>
+<b class="fc"><i>62</i>&nbsp;                        this.m_oCompetenciaTecnica = this.rct.getCompetenciaTecnicaById(strCTCod);</b>
+<b class="fc"><i>63</i>&nbsp;                        this.gp = this.m_oCompetenciaTecnica.getGrauProficienciaByValor(srtGPValor);</b>
+<b class="fc"><i>64</i>&nbsp;                        this.cCt = this.m_oCategoria.novoCaracterCT(this.m_oCompetenciaTecnica, this.gp, GPObg);</b>
+<b class="fc"><i>65</i>&nbsp;                        this.m_oCategoria.registaCaracterCT(this.cCt);</b>
+<i>66</i>&nbsp;                    }
+<b class="fc"><i>67</i>&nbsp;                    this.m_oRegistoCategoria.registaCategoria(this.m_oCategoria);</b>
+<i>68</i>&nbsp;                } else {
+<b class="nc"><i>69</i>&nbsp;                    this.m_oCategoria = null;</b>
+<i>70</i>&nbsp;                }
+<b class="fc"><i>71</i>&nbsp;            }</b>
+<b class="fc"><i>72</i>&nbsp;            sc.close();</b>
+<b class="nc"><i>73</i>&nbsp;        } catch (FileNotFoundException fne) {</b>
+<b class="nc"><i>74</i>&nbsp;            System.out.println(&quot;Ficheiro de Categorias não encontrado!&quot;);</b>
+<b class="nc"><i>75</i>&nbsp;        } catch (NullPointerException npe) {</b>
+<b class="nc"><i>76</i>&nbsp;            System.out.println(&quot;Falha de informação precisa no Registo de Categorias!&quot;);</b>
+<b class="fc"><i>77</i>&nbsp;        }</b>
+<b class="fc"><i>78</i>&nbsp;    }</b>
+<i>79</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

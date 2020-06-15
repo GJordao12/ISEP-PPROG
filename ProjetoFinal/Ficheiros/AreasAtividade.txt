@@ -1,0 +1,5 @@
+Código;Descrição Breve;Descrição Detalhada;
+
+1234;Informática;Programação em Java, C e Java Script;
+5678;Resolução;Perito em resolução de testes;
+5611;Edição;Perito edição de fotos;

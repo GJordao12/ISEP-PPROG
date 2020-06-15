@@ -1,0 +1,173 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: AutorizacaoFacade</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">pt.ipp.isep.dei.esoft.autorizacao</a> ]
+</div>
+
+<h1>Coverage Summary for Class: AutorizacaoFacade (pt.ipp.isep.dei.esoft.autorizacao)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">AutorizacaoFacade</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    57,1%
+  </span>
+  <span class="absValue">
+    (4/ 7)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    54,5%
+  </span>
+  <span class="absValue">
+    (12/ 22)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package pt.ipp.isep.dei.esoft.autorizacao;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import pt.ipp.isep.dei.esoft.autorizacao.model.*;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;/**
+<i>6</i>&nbsp; * Autorizacao Facade.
+<i>7</i>&nbsp; *
+<i>8</i>&nbsp; * @author paulomaio
+<i>9</i>&nbsp; */
+<b class="fc"><i>10</i>&nbsp;public class AutorizacaoFacade {</b>
+<b class="fc"><i>11</i>&nbsp;    private final RegistoPapeisUtilizador m_oPapeis = new RegistoPapeisUtilizador();</b>
+<b class="fc"><i>12</i>&nbsp;    private final RegistoUtilizadores m_oUtilizadores = new RegistoUtilizadores();</b>
+<b class="fc"><i>13</i>&nbsp;    private SessaoUtilizador m_oSessao = null;</b>
+<i>14</i>&nbsp;
+<i>15</i>&nbsp;    /**
+<i>16</i>&nbsp;     * Regista o papel de um utilizador.
+<i>17</i>&nbsp;     *
+<i>18</i>&nbsp;     * @param strPapel papel
+<i>19</i>&nbsp;     * @return boolean
+<i>20</i>&nbsp;     */
+<i>21</i>&nbsp;    public boolean registaPapelUtilizador(String strPapel) {
+<b class="fc"><i>22</i>&nbsp;        PapelUtilizador papel = this.m_oPapeis.novoPapelUtilizador(strPapel);</b>
+<b class="fc"><i>23</i>&nbsp;        return this.m_oPapeis.addPapel(papel);</b>
+<i>24</i>&nbsp;    }
+<i>25</i>&nbsp;
+<i>26</i>&nbsp;    /**
+<i>27</i>&nbsp;     * Regista utilizador com papeis.
+<i>28</i>&nbsp;     *
+<i>29</i>&nbsp;     * @param strNome     nome
+<i>30</i>&nbsp;     * @param strEmail    email
+<i>31</i>&nbsp;     * @param strPassword password
+<i>32</i>&nbsp;     * @param papeis      papeis
+<i>33</i>&nbsp;     * @return boolean
+<i>34</i>&nbsp;     */
+<i>35</i>&nbsp;    public boolean registaUtilizadorComPapeis(String strNome, String strEmail, String strPassword, String[] papeis) {
+<b class="fc"><i>36</i>&nbsp;        Utilizador utlz = this.m_oUtilizadores.novoUtilizador(strNome, strEmail, strPassword);</b>
+<b class="fc"><i>37</i>&nbsp;        for (String strPapel : papeis) {</b>
+<b class="fc"><i>38</i>&nbsp;            PapelUtilizador papel = this.m_oPapeis.procuraPapel(strPapel);</b>
+<b class="fc"><i>39</i>&nbsp;            utlz.addPapel(papel);</b>
+<i>40</i>&nbsp;        }
+<i>41</i>&nbsp;
+<b class="fc"><i>42</i>&nbsp;        return this.m_oUtilizadores.addUtilizador(utlz);</b>
+<i>43</i>&nbsp;    }
+<i>44</i>&nbsp;
+<i>45</i>&nbsp;    /**
+<i>46</i>&nbsp;     * Verifica se existe utilizador.
+<i>47</i>&nbsp;     *
+<i>48</i>&nbsp;     * @param strId id
+<i>49</i>&nbsp;     * @return boolean
+<i>50</i>&nbsp;     */
+<i>51</i>&nbsp;    public boolean existeUtilizador(String strId) {
+<b class="fc"><i>52</i>&nbsp;        return this.m_oUtilizadores.hasUtilizador(strId);</b>
+<i>53</i>&nbsp;    }
+<i>54</i>&nbsp;
+<i>55</i>&nbsp;
+<i>56</i>&nbsp;    /**
+<i>57</i>&nbsp;     * Faz login na sessão do utilizador.
+<i>58</i>&nbsp;     *
+<i>59</i>&nbsp;     * @param strId  id
+<i>60</i>&nbsp;     * @param strPwd password
+<i>61</i>&nbsp;     * @return sessão utilizador
+<i>62</i>&nbsp;     */
+<i>63</i>&nbsp;    public SessaoUtilizador doLogin(String strId, String strPwd) {
+<b class="nc"><i>64</i>&nbsp;        Utilizador utlz = this.m_oUtilizadores.procuraUtilizador(strId);</b>
+<b class="nc"><i>65</i>&nbsp;        if (utlz != null) {</b>
+<b class="nc"><i>66</i>&nbsp;            if (utlz.hasPassword(strPwd)) {</b>
+<b class="nc"><i>67</i>&nbsp;                this.m_oSessao = new SessaoUtilizador(utlz);</b>
+<i>68</i>&nbsp;            }
+<i>69</i>&nbsp;        }
+<b class="nc"><i>70</i>&nbsp;        return getSessaoAtual();</b>
+<i>71</i>&nbsp;    }
+<i>72</i>&nbsp;
+<i>73</i>&nbsp;    /**
+<i>74</i>&nbsp;     * Devolve a sessão atual.
+<i>75</i>&nbsp;     *
+<i>76</i>&nbsp;     * @return sessão atual
+<i>77</i>&nbsp;     */
+<i>78</i>&nbsp;    public SessaoUtilizador getSessaoAtual() {
+<b class="nc"><i>79</i>&nbsp;        return this.m_oSessao;</b>
+<i>80</i>&nbsp;    }
+<i>81</i>&nbsp;
+<i>82</i>&nbsp;    /**
+<i>83</i>&nbsp;     * Faz logout.
+<i>84</i>&nbsp;     */
+<i>85</i>&nbsp;    public void doLogout() {
+<b class="nc"><i>86</i>&nbsp;        if (this.m_oSessao != null)</b>
+<b class="nc"><i>87</i>&nbsp;            this.m_oSessao.doLogout();</b>
+<b class="nc"><i>88</i>&nbsp;        this.m_oSessao = null;</b>
+<b class="nc"><i>89</i>&nbsp;    }</b>
+<i>90</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-05-24 01:49</div>
+</div>
+</body>
+</html>

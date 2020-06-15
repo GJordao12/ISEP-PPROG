@@ -1,0 +1,5 @@
+Código;Descrição Breve;Descrição Detalhada;Area de Atividade Codigo;Grau(s) de Proficiência(s)(valor;designação);
+
+1232;Programação;Programação em C;1234;1;Mau;2;Bom;3;Acima da Média;
+9021;Rápida Resolução;Resolução de um teste em menos de 1h;5678;1;Mau;2;Bom;3;Muito Bom;4;Excelente;
+9999;Photoshop;Remover Fundo;5611;1;Mau;2;Bom;3;Acima da Média;
