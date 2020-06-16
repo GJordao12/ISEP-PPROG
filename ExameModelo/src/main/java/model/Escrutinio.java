@@ -68,6 +68,7 @@ public class Escrutinio {
     public List<Candidato> vencedor() {
         this.candidatos.sort(Comparator.comparingDouble(Candidato::getNumVotos));
         List<Candidato> listMaisVotados = new ArrayList<>();
+        listMaisVotados.add(this.candidatos.get(0));
         for (int i = 1; i < this.candidatos.size(); i++) {
             if (this.candidatos.get(i).getNumVotos() == this.candidatos.get(0).getNumVotos()) {
                 listMaisVotados.add(this.candidatos.get(i));
