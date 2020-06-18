@@ -2,6 +2,8 @@ package exceptions;
 
 /**
  * O Argumento inválido exception.
+ *
+ * @author Jordão
  */
 public class ArgumentoInvalidoException extends IllegalArgumentException {
 
