@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 /**
  * O Escritorio.
+ *
+ * @author Jordão
  */
 public class Escritorio extends Imovel implements Condominio, Serializable {
 
@@ -65,6 +67,7 @@ public class Escritorio extends Imovel implements Condominio, Serializable {
 
     /**
      * Descrição Textual do Escritório.
+     *
      * @return Descrição Textual do Escritório
      */
     @Override

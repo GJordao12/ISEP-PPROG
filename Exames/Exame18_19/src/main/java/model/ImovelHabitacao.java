@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 /**
  * O Imóvel de Habitação.
+ *
+ * @author Jordão
  */
 public class ImovelHabitacao extends Imovel implements Serializable {
 
@@ -18,7 +20,7 @@ public class ImovelHabitacao extends Imovel implements Serializable {
     private final int NUMQUARTOS_POR_OMISSAO = 0;
 
     /**
-     * Cria uma nova instânca de Apartamento recebendo como parâmetro a Morada do Imóvel, a Localidade do Imóvel,
+     * Cria uma nova instânca de Imóvel Habitação recebendo como parâmetro a Morada do Imóvel, a Localidade do Imóvel,
      * a Área Útil do Imóvel , o Preço do Imóvel e o Número de Quartos.
      *
      * @param morada     Morada do Imóvel

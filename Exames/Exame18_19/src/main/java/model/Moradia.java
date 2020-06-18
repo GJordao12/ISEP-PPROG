@@ -5,6 +5,8 @@ import java.util.Objects;
 
 /**
  * A Moradia.
+ *
+ * @author Jordão
  */
 public class Moradia extends ImovelHabitacao implements Serializable {
 

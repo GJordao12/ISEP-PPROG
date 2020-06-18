@@ -1,10 +1,5 @@
 package model;
 
-import model.Apartamento;
-import model.Escritorio;
-import model.Imovel;
-import model.Moradia;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,6 +10,8 @@ import java.util.List;
 
 /**
  * A Lista de Imóveis.
+ *
+ * @author Jordãoll
  */
 public class ListaImoveis {
 
@@ -40,7 +37,7 @@ public class ListaImoveis {
                 try {
                     if (!(this.imoveis.get(i + 1).getLocalidade().equalsIgnoreCase(localidade)))
                         return this.imoveis.remove(this.imoveis.get(i));
-                }catch (IndexOutOfBoundsException ie){
+                } catch (IndexOutOfBoundsException ie) {
                     return this.imoveis.remove(this.imoveis.get(i));
                 }
         }
@@ -48,7 +45,7 @@ public class ListaImoveis {
     }
 
     /**
-     * Calcula Valor de Vendas de caaa Tipo de Imóvel.
+     * Calcula o Valor de Vendas de cada Tipo de Imóvel.
      */
     public void calcularImoveis() {
         double somaApartamentos = 0;
@@ -62,13 +59,13 @@ public class ListaImoveis {
             if (imovel instanceof Escritorio)
                 somaEscritorio = somaEscritorio + imovel.calcularVendaImovel();
         }
-        System.out.println("Valor de Vendas - Apartamentos: " + somaApartamentos+"€");
-        System.out.println("Valor de Vendas - Moradia: " + somaMoradia+"€");
-        System.out.println("Valor de Vendas - Escritorio: " + somaEscritorio+"€");
+        System.out.println("Valor de Vendas - Apartamentos: " + somaApartamentos + "€");
+        System.out.println("Valor de Vendas - Moradia: " + somaMoradia + "€");
+        System.out.println("Valor de Vendas - Escritório: " + somaEscritorio + "€");
     }
 
     /**
-     * Exporar para ficheiro os objetos Imóveis.
+     * Exportar para ficheiro os objetos Imóveis.
      *
      * @param ficheiro Ficheiro
      * @return true se exportar. false se não exportar.
@@ -85,18 +82,5 @@ public class ListaImoveis {
             fne.printStackTrace();
             return false;
         }
-    }
-
-    /**
-     * Adiciona um Imovel á Lista de Imóveis.
-     *
-     * @param imovel Imóvel
-     */
-    public void addImovel(Imovel imovel) {
-        this.imoveis.add(imovel);
-    }
-
-    public List<Imovel> getImoveis(){
-        return this.imoveis;
     }
 }

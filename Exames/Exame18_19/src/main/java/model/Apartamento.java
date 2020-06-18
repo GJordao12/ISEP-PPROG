@@ -6,6 +6,8 @@ import java.io.Serializable;
 
 /**
  * O Apartamento.
+ *
+ * @author Jordão
  */
 public class Apartamento extends ImovelHabitacao implements Condominio, Serializable {
 

@@ -5,6 +5,8 @@ import java.util.Objects;
 
 /**
  * O Imóvel.
+ *
+ * @author Jordão
  */
 public class Imovel implements Comparable<Imovel>, Serializable {
 
@@ -214,7 +216,7 @@ public class Imovel implements Comparable<Imovel>, Serializable {
     @Override
     public int compareTo(Imovel o) {
         if (localidade.equals(o.getLocalidade()))
-            return Double.compare(o.getAreaUtil(),areaUtil);
+            return Double.compare(o.getAreaUtil(), areaUtil);
         return localidade.compareTo(o.getLocalidade());
     }
 }

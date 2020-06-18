@@ -1,7 +1,9 @@
 package interfaces;
 
 /**
- * The interface Condominio.
+ * A Interface Condomínio.
+ *
+ * @author Jordão
  */
 public interface Condominio {
 
