@@ -70,7 +70,7 @@ public class ListaImoveis {
      * @param ficheiro Ficheiro
      * @return true se exportar. false se não exportar.
      */
-    public boolean exporarParaFicheiro(File ficheiro) {
+    public boolean exportarParaFicheiro(File ficheiro) {
         try {
             FileOutputStream fileOut = new FileOutputStream(ficheiro);
             ObjectOutputStream outStream = new ObjectOutputStream(fileOut);
