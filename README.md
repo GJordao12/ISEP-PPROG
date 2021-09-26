@@ -1,4 +1,4 @@
-# ISEP - PPROG (1º ANO - 2º SEMESTRE)
-* Linguagem: Java
-* Projetos e Trabalhos de PPROG da Universidade
-* Ano: 2020
+# ISEP - PPROG (1º YEAR - 2º SEMESTER)
+* Language: Java
+* University PPROG Projects and Works
+* Year: 2020
